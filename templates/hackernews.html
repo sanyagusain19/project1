@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HackerNews</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/topcharts.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <a href="{{ url_for('dynamicscraper') }}" class="back-btn">← Back</a>
+        <h1> Hacker News 📰</h1>
+
+        <p class="subtitle">
+            Dynamic Web Scraping using Selenium
+        </p>
+
+        <div class="table-box">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Score</th>
+                        <th>Comments</th>
+                        <th>Posted</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    {% for item in news %}
+
+                    <tr>
+
+                        <td>{{ item.title }}</td>
+
+                        <td>{{ item.score }}</td>
+
+                        <td>{{ item.comments }}</td>
+
+                        <td>{{ item.time }}</td>
+
+                    </tr>
+
+                    {% endfor %}
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

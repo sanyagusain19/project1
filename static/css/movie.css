@@ -1,0 +1,325 @@
+/* =========================
+   FONT + BASE
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Poppins", sans-serif;
+
+    background:linear-gradient(
+        135deg,
+        #FFF9FC,
+        #F6F1FF,
+        #F8FAFF
+    );
+
+    color:#4B4453;
+
+    min-height:100vh;
+}
+
+
+/* =========================
+   PAGE WRAPPER
+========================= */
+
+.page{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    padding:40px 0;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero{
+    text-align:center;
+    margin-bottom:60px;
+    padding-top:20px;
+}
+
+.hero h1{
+    font-size:56px;
+    color:#7C6CB7;
+    margin-bottom:12px;
+    letter-spacing:0.5px;
+}
+
+.hero-text{
+    font-size:18px;
+    color:#7E7691;
+    max-width:620px;
+    margin:0 auto 35px;
+    line-height:1.7;
+}
+/* =========================
+   SEARCH BAR (CENTER PIECE)
+========================= */
+
+.search-box{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+
+    max-width:800px;
+    margin:0 auto;
+}
+
+.search-box input{
+    flex:1;
+
+    padding:18px 22px;
+    font-size:17px;
+
+    border-radius:18px;
+    border:2px solid #E9DDF8;
+
+    outline:none;
+    background:white;
+
+    transition:0.25s;
+}
+
+.search-box input:focus{
+    border-color:#B89AF4;
+    box-shadow:0 0 18px rgba(184,154,244,0.25);
+}
+
+.search-box button{
+    padding:18px 26px;
+
+    border:none;
+    border-radius:18px;
+
+    background:linear-gradient(
+        135deg,
+        #B89AF4,
+        #8E7DBE
+    );
+
+    color:white;
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.25s;
+}
+
+.search-box button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 20px rgba(142,125,190,0.25);
+}
+
+
+/* =========================
+   MOVIE CARD (MAIN LAYOUT)
+========================= */
+
+.movie-card{
+    display:flex;
+    gap:45px;
+
+    background:white;
+
+    padding:45px;
+    border-radius:28px;
+
+    border:1px solid #EEE3FB;
+
+    box-shadow:0 15px 40px rgba(166,145,211,0.12);
+
+    margin-top:20px;
+}
+
+
+/* =========================
+   POSTER
+========================= */
+
+.poster{
+    flex:0 0 300px;
+}
+
+.poster img{
+    width:300px;
+    border-radius:20px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,0.18);
+}
+
+.poster-placeholder{
+    width:300px;
+    height:440px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:20px;
+
+    background:#F3EDFF;
+    color:#7C6CB7;
+}
+
+
+/* =========================
+   MOVIE INFO
+========================= */
+
+.movie-info{
+    flex:1;
+}
+
+.movie-info h2{
+    font-size:36px;
+    color:#6D5BAF;
+    margin-bottom:5px;
+}
+
+.movie-year{
+    display:inline-block;
+    margin-bottom:25px;
+    color:#8A81A4;
+    font-size:16px;
+}
+
+
+/* =========================
+   INFO GRID (CLEAN ALIGNMENT)
+========================= */
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+    margin-bottom:25px;
+}
+
+.info-item{
+    background:#FAF6FF;
+
+    border-radius:14px;
+    padding:14px 16px;
+
+    border:1px solid #EADCF9;
+}
+
+.info-item.full-width{
+    grid-column:span 2;
+}
+
+.label{
+    display:block;
+    font-size:13px;
+    color:#8A81A4;
+    margin-bottom:4px;
+}
+
+.value{
+    font-size:15px;
+    color:#4B4453;
+    font-weight:500;
+}
+
+
+/* =========================
+   STORY SECTION
+========================= */
+
+.story{
+    margin-top:10px;
+    padding:22px;
+
+    background:#FFF9FE;
+    border:1px solid #EFE4FB;
+
+    border-radius:16px;
+}
+
+.story h3{
+    color:#7A63C8;
+    margin-bottom:10px;
+}
+
+.story p{
+    line-height:1.8;
+    color:#5C566A;
+}
+
+
+/* =========================
+   EMPTY / WELCOME STATES
+========================= */
+
+.empty-state,
+.welcome{
+    text-align:center;
+    margin-top:50px;
+}
+
+.empty-state h2,
+.welcome h2{
+    color:#7C6CB7;
+    margin-bottom:10px;
+}
+
+.empty-state p,
+.welcome p{
+    color:#6E6880;
+    font-size:16px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+.movie-card{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+.poster,
+.poster img,
+.poster-placeholder{
+    width:100%;
+    max-width:320px;
+}
+
+.info-grid{
+    grid-template-columns:1fr;
+}
+
+.info-item.full-width{
+    grid-column:auto;
+}
+
+.search-box{
+    flex-direction:column;
+}
+
+.search-box button,
+.search-box input{
+    width:100%;
+}
+
+.hero h1{
+    font-size:42px;
+}
+
+}

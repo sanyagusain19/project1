@@ -8,234 +8,214 @@
 
     <title>About | My Portfolio</title>
 
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='css/about.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet">
+        rel="stylesheet">
 
 </head>
 
 <body>
 
-<nav class="navbar">
+    <nav class="navbar">
 
-    <div class="logo">
-        My Portfolio
-    </div>
+        <div class="logo">
+            My Portfolio
+        </div>
 
-    <div class="nav-links">
+        <div class="nav-links">
 
-        <a href="/">Home</a>
+            <a href="/">Home</a>
 
-        <a href="/about" class="active">About me</a>
+            <a href="/about" class="active">About me</a>
+            <a href="/projects"> Projects</a>
 
-        <a href="/projects">Projects</a>
 
-    </div>
 
-</nav>
+        </div>
 
-<section class="hero">
+    </nav>
 
-    <div class="hero-text">
+    <section class="hero">
 
-        <span class="tag">
-            About Me
-        </span>
+        <div class="hero-text">
 
-        <h1>
-            "Every expert was once a beginner who refused to give up."
-        </h1>
+            <span class="tag">
+                About Me
+            </span>
 
-        <p>
 
-            Hello! I'm <strong>Sanya</strong>,
-            an AI & Machine Learning enthusiast who enjoys
-            transforming ideas into intelligent applications.
-            I love Python, Data Science, Web Development,
-            Flask, and creating beautiful user experiences.
-
-        </p>
-
-    </div>
-
-    <div class="profile-card">
-
-        <img src="{{ url_for('static', filename='images/profile.jpg') }}"
-             alt="Profile">
-
-    </div>
-
-</section>
-<section class="section">
-
-    <h2>A Little About Me</h2>
-
-    <div class="about-grid">
-
-        <div class="about-card">
-
-            <div class="icon">🌿</div>
-
-            <h3>Nature Lover</h3>
+            <h1>
+                "Every expert was once a beginner who refused to give up."
+            </h1>
 
             <p>
-                I enjoy calm environments, soft aesthetics, and finding inspiration as well as peace in nature.
+
+                Hello! I'm <strong>Sanya</strong>,
+                an AI & Machine Learning enthusiast who enjoys
+                transforming ideas into intelligent applications.
+                I love Python, Data Science, Web Development,
+                Flask, and creating beautiful user experiences.
+
             </p>
 
         </div>
 
-        <div class="about-card">
+        <div class="profile-card">
 
-            <div class="icon">💡</div>
-
-            <h3>Problem Solver</h3>
-
-            <p>
-                I love turning ideas into practical solutions through code and creativity.
-            </p>
+            <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Profile">
 
         </div>
 
-        <div class="about-card">
+    </section>
+    <section class="section">
 
-            <div class="icon">🚀</div>
+        <h2>A Little About Me</h2>
 
-            <h3>Lifelong Learner</h3>
+        <div class="about-grid">
 
-            <p>
-                Every project teaches me something new, and I'm always excited to keep learning.
-            </p>
+            <div class="about-card">
+
+                <div class="icon">🌿</div>
+
+                <h3>Nature Lover</h3>
+
+                <p>
+                    I enjoy calm environments, soft aesthetics, and finding inspiration as well as peace in nature.
+                </p>
+
+            </div>
+
+            <div class="about-card">
+
+                <div class="icon">💡</div>
+
+                <h3>Problem Solver</h3>
+
+                <p>
+                    I love turning ideas into practical solutions through code and creativity.
+                </p>
+
+            </div>
+
+            <div class="about-card">
+
+                <div class="icon">🚀</div>
+
+                <h3>Lifelong Learner</h3>
+
+                <p>
+                    Every project teaches me something new, and I'm always excited to keep learning.
+                </p>
+
+            </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-<section class="section">
+    <section class="section">
 
-    <h2>Education</h2>
+        <h2>Education</h2>
 
-    <div class="info-card">
+        <div class="info-card">
 
-        <h3>B.Tech – Artificial Intelligence & Machine Learning</h3>
+            <h3>B.Tech – Artificial Intelligence & Machine Learning</h3>
 
-        <p>JMIETI, Haryana</p>
+            <p>JMIETI, Haryana</p>
 
-    </div>
-
-</section>
-
-<section class="section">
-
-<h2>Skills</h2>
-
-<div class="skills">
-
-<span>Python</span>
-<span>HTML</span>
-<span>CSS</span>
-<span>Flask</span>
-<span>Statistics </span>
-<span>Power BI</span>
-<span>Machine Learning</span>
-<span>Pandas</span>
-<span>NumPy</span>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>Currently Learning</h2>
-
-<div class="learning">
-
-<div class="learn-card">
-🌐 Web Development
-</div>
-
-<div class="learn-card">
-⚡ FastAPI
-</div>
-
-<div class="learn-card">
-🤖 Deep Learning
-</div>
-
-<div class="learn-card">
-📈 Mathematics for ML
-</div>
-
-</div>
-
-</section>
-
-<section class="projects">
-
-    <h2>Featured Projects</h2>
-
-    <div class="projects">
-
-        <div class="project-card">
-            IMDb Web Scraper
         </div>
 
-        <div class="project-card">
-            Spotify Analysis
+    </section>
+
+    <section class="section">
+
+        <h2>Skills</h2>
+
+        <div class="skills">
+
+            <span>Python</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Flask</span>
+            <span>Statistics </span>
+            <span>Power BI</span>
+            <span>Machine Learning</span>
+            <span>Pandas</span>
+            <span>NumPy</span>
+
         </div>
 
-        <div class="project-card">
-           Machine learning models
+    </section>
+
+    <section class="section">
+
+        <h2>Currently Learning</h2>
+
+        <div class="learning">
+
+            <div class="learn-card">
+                🌐 Web Development
+            </div>
+
+            <div class="learn-card">
+                ⚡ FastAPI
+            </div>
+
+            <div class="learn-card">
+                🤖 Deep Learning
+            </div>
+
+            <div class="learn-card">
+                📈 Mathematics for ML
+            </div>
+
         </div>
 
-    </div>
+    </section>
 
-</section>
 
-<section class="section">
 
-<h2>Let's Connect</h2>
+    <section class="section">
 
-<div class="contact">
+        <h2>Let's Connect</h2>
 
-<div class="contact-card">
+        <div class="contact">
 
-<h3>📧 Email</h3>
+            <div class="contact-card">
 
-<p>saniya8524243@jmieti.edu.in</p>
+                <h3>📧 Email</h3>
 
-</div>
+                <p>saniya8524243@jmieti.edu.in</p>
 
-<div class="contact-card">
+            </div>
 
-<h3>💼 LinkedIn</h3>
+            <div class="contact-card">
 
-<p>Your LinkedIn</p>
+                <h3>💼 LinkedIn</h3>
 
-</div>
+                <p>Your LinkedIn</p>
 
-<div class="contact-card">
+            </div>
 
-<h3>💻 GitHub</h3>
+            <div class="contact-card">
 
-<p>https://github.com/sanyagusain19</p>
+                <h3>💻 GitHub</h3>
 
-</div>
+                <p>https://github.com/sanyagusain19</p>
 
-</div>
+            </div>
 
-</section>
+        </div>
 
-<footer>
+    </section>
 
-Made with ❤️ by SANIYA
+    <footer>
 
-</footer>
+        Made with ❤️ by SANIYA
+
+    </footer>
 
 </body>
 

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Good Quotes Scraper</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/goodquotesscraper.css') }}">
+
+</head>
+
+<body>
+
+    <!-- ==========================
+            NAVBAR
+    =========================== -->
+
+    <nav class="navbar">
+
+        <a href="{{ url_for('staticscraping') }}" class="back-btn">
+            ← Back
+        </a>
+
+        <div class="logo">
+            💬 Good Quotes Scraper
+        </div>
+
+        <div class="nav-links">
+
+            <a href="{{ url_for('projects') }}">
+                Projects
+            </a>
+
+            <a href="{{ url_for('webscraping') }}">
+                Web Scraping
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ==========================
+            HERO
+    =========================== -->
+
+    <section class="hero">
+
+
+        <h1>Inspirational Quotes Collection</h1>
+
+        <p>
+
+            This scraper extracts inspirational quotes, authors, images,
+            and additional details from Goodreads using
+            <strong>BeautifulSoup</strong> and
+            <strong>Requests</strong>.
+
+        </p>
+
+    </section>
+
+
+    <!-- ==========================
+            TABLE
+    =========================== -->
+
+    <section class="table-section">
+
+        <div class="table-card">
+
+            <h2 class="table-title">
+                ✨ Popular Quotes
+            </h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>#</th>
+                        <th>Quote</th>
+                        <th>Author</th>
+                        <th>Likes</th>
+                        <th>Image</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    {% for quote in quote_data %}
+
+<tr>
+
+    <td>{{ loop.index }}</td>
+
+    <td>{{ quote.quote }}</td>
+
+    <td>{{ quote.author }}</td>
+
+    <td>{{ quote.likes }}</td>
+
+    <td>
+        <a href="{{ quote.image_url }}" target="_blank">
+            View
+        </a>
+    </td>
+
+</tr>
+
+{% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================
+            QUOTE
+    =========================== -->
+
+    <section class="quote">
+
+        <div class="quote-card">
+
+            <span class="quote-mark">❝</span>
+
+            <h2>
+
+                Words have the power to inspire,
+                and data has the power to preserve them.
+
+            </h2>
+
+            <span class="quote-mark bottom">❞</span>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

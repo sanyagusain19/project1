@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PokeS</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pokemon.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="hero">
+
+    <h1>PokeS</h1>
+
+    <p>
+        Search, Explore and Discover your favourite Pokémon.
+    </p>
+
+    <form action="/pokemon" method="GET" class="search-box">
+
+        <input
+            type="text"
+            name="name"
+            placeholder="Search Pokémon..."
+            autocomplete="off"
+            value="{{ name if name else '' }}"
+        >
+
+        <button type="submit">
+            Search
+        </button>
+
+    </form>
+
+</div>
+
+
+{% if pokemon_data %}
+
+<div class="pokemon-card">
+
+    <div class="image-section">
+        <img src="{{ pokemon_data.image }}">
+    </div>
+
+    <div class="info-section">
+
+        <h2>
+            {{ pokemon_data.name|capitalize }}
+            <span>#{{ pokemon_data.id }}</span>
+        </h2>
+
+        <div class="types">
+
+            {% for type in pokemon_data.types %}
+
+                <span class="type">
+                    {{ type }}
+                </span>
+
+            {% endfor %}
+
+        </div>
+
+        <h3>Abilities</h3>
+
+        <div class="abilities">
+
+            {% for ability in pokemon_data.abilities %}
+
+                <span class="ability">
+                    {{ ability }}
+                </span>
+
+            {% endfor %}
+
+        </div>
+
+        <div class="stats">
+
+            <h3>Base Stats</h3>
+
+            {% for stat, value in pokemon_data.stats.items() %}
+
+            <div class="stat-row">
+
+                <span class="stat-name">
+                    {{ stat.replace('_',' ')|title }}
+                </span>
+
+                <div class="progress">
+                    <div
+                        class="progress-fill"
+                        style="width: {{ value if value <= 100 else 100 }}%;">
+                    </div>
+                </div>
+
+                <span class="stat-value">
+                    {{ value }}
+                </span>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</div>
+
+{% elif name %}
+
+<div class="not-found">
+    Pokémon "{{ name }}" not found 😢
+</div>
+
+{% endif %}
+
+</body>
+</html>

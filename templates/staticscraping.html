@@ -10,76 +10,133 @@
 
 <body>
 
-<!-- NAVBAR -->
-<div class="navbar">
+    <!-- NAVBAR -->
+    <div class="navbar">
 
-   
-    
 
-    <!-- CENTER LOGO -->
-    <div class="logo">
-        ✨ <i> Static Scraping </i>
+
+
+        <!-- CENTER LOGO -->
+        <div class="logo">
+            ✨ <i> Static Scraping </i>
+        </div>
+
+        <!-- RIGHT NAV -->
+        <div class="nav-links">
+            <a href="/projects">Projects</a>
+            <a href="/webscraping">Web Scraping</a>
+            <a href="/" class="active">Home</a>
+        </div>
+
     </div>
 
-    <!-- RIGHT NAV -->
-    <div class="nav-links">
-        <a href="/projects">Projects</a>
-        <a href="/webscraping">Web Scraping</a>
-        <a href="/" class="active">Home</a>
-    </div>
 
-</div>
+    <!-- HERO SECTION -->
+    <section class="hero">
 
+        <div class="tag"> BEAUTIFULSOUP • REQUESTS </div>
 
-<!-- HERO SECTION -->
-<section class="hero">
+        <h1>Static Scraping Projects</h1>
 
-    <div class="tag"> BEAUTIFULSOUP • REQUESTS </div>
+        <p>
+            <i> This project demonstrates static web scraping using Python.
+                It extracts structured data from HTML pages using BeautifulSoup and Requests.
+                Focus is on parsing DOM structure and collecting meaningful information.</i>
+        </p>
 
-    <h1>Static Scraping Projects</h1>
+    </section>
+    <!-- ==========================
+        SCRAPERS SECTION
+========================== -->
 
-    <p>
-       <i> This project demonstrates static web scraping using Python.
-        It extracts structured data from HTML pages using BeautifulSoup and Requests.
-        Focus is on parsing DOM structure and collecting meaningful information.</i>
-    </p>
-
-</section>
-
-
-
-<!-- OUTPUT SECTION -->
-
-
-
-</section>
 <section class="categories">
 
+    <!-- Spotify -->
     <div class="project-card">
+
         <h2>🎧 Spotify Web Scraper</h2>
-        <p>Extract songs, artists, playlists and metadata from Spotify web pages.</p>
-        <a href="#" class="explore-btn">Explore</a>
+
+        <p>
+            Extract artist names and profile links from Spotify pages using
+            BeautifulSoup and Requests.
+        </p>
+
+        <a href="{{ url_for('spotifyscraper') }}" class="explore-btn">
+            Explore
+        </a>
+
     </div>
 
+    <!-- Top Companies -->
     <div class="project-card">
+
         <h2>🏢 Top Companies Scraper</h2>
-        <p>Scrapes company lists, ratings, and insights from business listing sites.</p>
-        <a href="#" class="explore-btn">Explore</a>
+
+        <p>
+            Scrape company names, ratings, locations, and workplace insights
+            from AmbitionBox.
+        </p>
+
+        <a href="{{ url_for('topcompaniesscraper') }}" class="explore-btn">
+            Explore
+        </a>
+
     </div>
 
+    <!-- Steam Games -->
     <div class="project-card">
-        <h2>🎮 Streaming Games Scraper</h2>
-        <p>Extracts trending games, stats, and live streaming data from platforms.</p>
-        <a href="#" class="explore-btn">Explore</a>
+
+        <h2>🎮 Steam Games Scraper</h2>
+
+        <p>
+            Collect Steam game titles, prices, release dates,
+            and cover images using static web scraping.
+        </p>
+
+        <a href="{{ url_for('steamgames') }}" class="explore-btn">
+            Explore
+        </a>
+
     </div>
 
+    <!-- Anime -->
     <div class="project-card">
+
         <h2>🍥 Anime Info Scraper</h2>
-        <p>Fetches anime details like ratings, episodes, genres, and summaries.</p>
-        <a href="#" class="explore-btn">Explore</a>
+
+        <p>
+            Extract top anime rankings, scores,
+            titles, and links from MyAnimeList.
+        </p>
+
+        <a href="{{ url_for('animescraper') }}" class="explore-btn">
+            Explore
+        </a>
+
+    </div>
+
+    <!-- Goodreads Quotes -->
+    <div class="project-card">
+
+        <h2>💬 Goodreads Quotes</h2>
+
+        <p>
+            Scrape inspirational quotes, authors,
+            likes, and images from Goodreads.
+        </p>
+
+        <a href="{{ url_for('quotes') }}" class="explore-btn">
+            Explore
+        </a>
+
     </div>
 
 </section>
 
-</body>
-</html>
+
+
+    <!-- OUTPUT SECTION -->
+
+
+
+    
