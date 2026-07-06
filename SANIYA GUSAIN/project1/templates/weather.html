@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>SkyCast</title>
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/weather.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>☀ SkyCast</h1>
+
+        <p class="subtitle">
+            Beautiful Weather Forecast
+        </p>
+
+        <form method="GET">
+
+            <div class="input-group">
+
+                <input type="number" step="any" name="lat" placeholder="Latitude" value="{{ latitude }}">
+
+                <input type="number" step="any" name="lon" placeholder="Longitude" value="{{ longitude }}">
+            </div>
+
+            <button>
+                🔍 Get Forecast
+            </button>
+
+        </form>
+
+        {% if weather %}
+
+        <div class="forecast">
+
+            {% for i in range(weather["dayOfWeek"]|length) %}
+
+            <div class="card">
+
+             {{ weather["dayOfWeek"][i] }}
+
+             {{ weather["temperatureMax"][i] }}
+
+             {{ weather["temperatureMin"][i] }}
+
+             {{ weather["narrative"][i] }}
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+</body>
+
+</html>
