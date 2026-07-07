@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_from_directory
 app = Flask(__name__)  #contains main 
 
 
@@ -43,22 +43,54 @@ def staticscraping():
 def topcompaniesscraper():
     companies = top_companies_scraper()
     return render_template("topcompaniesscraper.html", companies = companies)
+@app.route("/download/topcompanies")
+def download_topcompanies_data():
+    return send_from_directory(
+        "one.ipynb",
+        "topcompanies",     
+        as_attachment=True
+    )
 
 @app.route("/animescraper")
 def animescraper():
     animes = anime_scraper()
     
     return render_template("animescraper.html", animes = animes)
+@app.route("/download/animes")
+def download_animes_data():
+    return send_from_directory(
+        "one.ipynb",
+        "anime",     
+        as_attachment=True
+    )
+
 
 @app.route("/spotifyscraper")
 def spotifyscraper():
     spotify_data = spotify()
     return render_template("spotify.html", spotify_data = spotify_data)
 
+
+@app.route("/download/spotify")
+def download_spotify():
+    return send_from_directory(
+        "one.ipynb",
+        "Spotify_data",     
+        as_attachment=True
+    )
+
 @app.route("/steamgamesscraper")
 def steamgames():
     games_data = streamgames()
     return render_template("steamgames.html", games_data = games_data)
+
+@app.route("/download/stream_games")
+def download_stream_games():
+    return send_from_directory(
+        "one.ipynb",
+        "stream_games",     
+        as_attachment=True
+    )
 
 @app.route("/goodquotesscraper")
 def quotes():

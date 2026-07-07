@@ -867,6 +867,23 @@ height:140px;
     color:#666;
 
 }
+.contact-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 24px;
+    background:#f1cae5;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:600;
+    transition:0.3s ease;
+}
+
+.contact-btn:hover{
+    background:#ec76c9;
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(224, 224, 233, 0.35);
+}
 
 .contact-card a{
 

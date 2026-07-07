@@ -48,95 +48,125 @@
     <!-- ==========================
         SCRAPERS SECTION
 ========================== -->
+    <section class="categories">
 
-<section class="categories">
+        <!-- Spotify -->
+        <div class="project-card">
 
-    <!-- Spotify -->
-    <div class="project-card">
+            <h3> Spotify Web Scraper 🎧</h3>
 
-        <h2>🎧 Spotify Web Scraper</h2>
+            <p>
+                Extract artist names and profile links from Spotify pages using
+                BeautifulSoup and Requests.
+            </p>
 
-        <p>
-            Extract artist names and profile links from Spotify pages using
-            BeautifulSoup and Requests.
-        </p>
+            <div class="button-group">
 
-        <a href="{{ url_for('spotifyscraper') }}" class="explore-btn">
-            Explore
-        </a>
+                <a href="/spotifyscraper" class="explore-btn">
+                    Explore
+                </a>
 
-    </div>
+                <a href="{{ url_for('download_spotify') }}" class="explore-btn csv-btn">
+                    CSV  ⬇
+                </a>
 
-    <!-- Top Companies -->
-    <div class="project-card">
+            </div>
 
-        <h2>🏢 Top Companies Scraper</h2>
+        </div>
 
-        <p>
-            Scrape company names, ratings, locations, and workplace insights
-            from AmbitionBox.
-        </p>
+        <!-- Top Companies -->
+        <div class="project-card">
 
-        <a href="{{ url_for('topcompaniesscraper') }}" class="explore-btn">
-            Explore
-        </a>
+            <h3> Top Companies Scraper 🏢</h3>
 
-    </div>
+            <p>
+                Scrape company names, ratings, locations, and workplace insights
+                from AmbitionBox.
+            </p>
 
-    <!-- Steam Games -->
-    <div class="project-card">
+            <div class="button-group">
 
-        <h2>🎮 Steam Games Scraper</h2>
+                <a href="/topcompaniesscraper" class="explore-btn">
+                    Explore
+                </a>
+                 <a href="{{ url_for('download_topcompanies_data') }}" class="explore-btn csv-btn">
+                    CSV  ⬇
+                </a>
 
-        <p>
-            Collect Steam game titles, prices, release dates,
-            and cover images using static web scraping.
-        </p>
+            
 
-        <a href="{{ url_for('steamgames') }}" class="explore-btn">
-            Explore
-        </a>
+            </div>
 
-    </div>
+        </div>
 
-    <!-- Anime -->
-    <div class="project-card">
+        <!-- Steam -->
+        <div class="project-card">
 
-        <h2>🍥 Anime Info Scraper</h2>
+            <h3>Steam Games Scraper 🎮 </h3>
 
-        <p>
-            Extract top anime rankings, scores,
-            titles, and links from MyAnimeList.
-        </p>
+            <p>
+                Collect Steam game titles, prices, release dates, and cover images.
+            </p>
 
-        <a href="{{ url_for('animescraper') }}" class="explore-btn">
-            Explore
-        </a>
+            <div class="button-group">
 
-    </div>
+                <a href="/steamgamesscraper" class="explore-btn">
+                    Explore
+                </a>
 
-    <!-- Goodreads Quotes -->
-    <div class="project-card">
+                <a href="{{ url_for('download_stream_games') }}" class="explore-btn csv-btn">
+                    CSV  ⬇
+                </a>
 
-        <h2>💬 Goodreads Quotes</h2>
+            </div>
 
-        <p>
-            Scrape inspirational quotes, authors,
-            likes, and images from Goodreads.
-        </p>
+        </div>
 
-        <a href="{{ url_for('quotes') }}" class="explore-btn">
-            Explore
-        </a>
+        <!-- Anime -->
+        <div class="project-card">
 
-    </div>
+            <h3>🌀 Anime Info Scraper</h3>
 
-</section>
+            <p>
+                Extract top anime rankings, scores, titles, and links from MyAnimeList.
+            </p>
+
+            <div class="button-group">
+
+                <a href="/animescraper" class="explore-btn">
+                    Explore
+                </a>
+                 <a href="{{ url_for('download_animes_data') }}" class="explore-btn csv-btn">
+                    CSV  ⬇
+                </a>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Goodreads Quotes -->
+        <div class="project-card">
+
+            <h2>💬 Goodreads Quotes</h2>
+
+            <p>
+                Scrape inspirational quotes, authors,
+                likes, and images from Goodreads.
+            </p>
+
+            <a href="{{ url_for('quotes') }}" class="explore-btn">
+                Explore
+            </a>
+
+        </div>
+
+    </section>
 
 
 
     <!-- OUTPUT SECTION -->
-
-
-
-    
+     </body>
+</html>
