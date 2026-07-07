@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Projects</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/apis.css') }}">
+</head>
+
+<body>
+    <div class="navbar">
+
+    <!-- LEFT: BACK BUTTON -->
+    <div class="back-btn">
+        <a href="{{ url_for('webscraping') }}">⬅ Back</a>
+    </div>
+
+    <!-- CENTER / RIGHT NAV -->
+    <div class="nav-links">
+
+        <a href="{{ url_for('apis') }}" class="active">Projects</a>
+
+        <a href="{{ url_for('webscraping') }}">Webscraping</a>
+
+    </div>
+
+</div>
+
+<div class="container">
+
+    <h1 class="title">🌐 API Projects</h1>
+
+    <div class="categories">
+
+        <!-- 1 -->
+        <div class="project-card">
+            <h2>Weather API 🌦 </h2>
+            <p>Get real-time weather data using API integration.</p>
+            <a href="/weather" class="explore-btn">Explore</a>
+        </div>
+
+        <!-- 2 -->
+        <div class="project-card">
+            <h2> Plant API 🌿</h2>
+            <p>Discover plant species with images and details.</p>
+            <a href="/plants" class="explore-btn">Explore</a>
+        </div>
+
+        <!-- 3 -->
+        <div class="project-card">
+            <h2>Movies API🎬 </h2>
+            <p>Search movies, ratings and details using API.</p>
+            <a href="/movies" class="explore-btn">Explore</a>
+        </div>
+
+        <!-- 4 -->
+        <div class="project-card">
+            <h2>📰 PokeS 🔴</h2>
+            <p>Pokemon details and information.</p>
+            <a href="/pokemon" class="explore-btn">Explore</a>
+        </div>
+
+        <!-- 5 -->
+        <div class="project-card">
+            <h2>Products</h2>
+            <p>Products detail </p>
+            <a href="/products" class="explore-btn">Explore</a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

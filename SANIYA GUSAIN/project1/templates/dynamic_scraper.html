@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Dynamic Scraping </title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dynamic_scraper.css') }}">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+
+
+
+
+        <!-- CENTER LOGO -->
+        <div class="logo">
+            ✨ <i> Dynamic Scraping </i>
+        </div>
+
+        <!-- RIGHT NAV -->
+        <div class="nav-links">
+            <a href="/projects">Projects</a>
+            <a href="/webscraping">Web Scraping</a>
+            <a href="/dynamic" class="active">Home</a>
+        </div>
+
+    </div>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <div class="tag"> SELENIUM • REQUESTS </div>
+
+        <h1>Dynamic Scraping Projects</h1>
+
+        <p>
+            <i> Dynamic Scraping is a Python-based web scraping project that extracts live data from websites based on
+                user input. Unlike static scraping, it dynamically fetches information such as products, prices,
+                ratings, or other details from different webpages in real time. The project uses Requests,
+                BeautifulSoup, and Flask to process user queries, scrape relevant content, and display the results
+                through a clean, responsive web interface..</i>
+        </p>
+
+    </section>
+    <!-- ==========================
+        SCRAPERS SECTION
+========================== -->
+
+    <section class="categories">
+
+        <!-- Spotify -->
+        <div class="project-card">
+
+            <h2> IMDB Top movies </h2>
+
+            <p>
+                Extract artist names and profile links from Spotify pages using
+                BeautifulSoup and Requests.
+            </p>
+
+            <a href="{{ url_for('topcharts') }}" class="explore-btn">
+                Explore
+            </a>
+
+        </div>
+
+        <!-- Top Companies -->
+        <div class="project-card">
+
+            <h2> TechCrunch Startups 🚀</h2>
+
+            <p>Scrape startup news and authors using Selenium.</p>>
+
+            <a href="{{ url_for('startup') }}" class="explore-btn">
+                Explore
+            </a>
+
+        </div>
+
+
+
+
+
+        <!-- Steam Games -->
+        <div class="project-card">
+
+            <h2>HackerNews</h2>
+
+            <p>
+                Dynamic Web Scraping using Selenium
+            </p>
+
+            <a href="{{ url_for('hackernews') }}" class="explore-btn">
+                Explore
+            </a>
+
+        </div>
+
+        <!-- Anime -->
+        <div class="project-card">
+
+            <h2>SPotify top songs</h2>
+
+            <p>
+               Top songs and artist from the spotify.
+            </p>
+
+            <a href="{{ url_for('topS') }}" class="explore-btn">
+                Explore
+            </a>
+
+        </div>
+
+        <!-- Goodreads Quotes -->
+        <div class="project-card">
+
+            <h2>Disaster details</h2>
+
+            <p>
+               Live Earthquakes • Floods • Cyclones Data (Selenium Scraping)
+            </p>
+
+            <a href="{{ url_for('disasters') }}" class="explore-btn">
+                Explore
+            </a>
+
+        </div>
+
+    </section>

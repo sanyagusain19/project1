@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>𝘚𝘵𝘢𝘵𝘪𝘤 𝘚𝘤𝘳𝘢𝘱𝘪𝘯𝘨</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/staticscraping.css') }}">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+
+
+
+
+        <!-- CENTER LOGO -->
+        <div class="logo">
+            ✨ <i> Static Scraping </i>
+        </div>
+
+        <!-- RIGHT NAV -->
+        <div class="nav-links">
+            <a href="/projects">Projects</a>
+            <a href="/webscraping">Web Scraping</a>
+            <a href="/" class="active">Home</a>
+        </div>
+
+    </div>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <div class="tag"> BEAUTIFULSOUP • REQUESTS </div>
+
+        <h1>Static Scraping Projects</h1>
+
+        <p>
+            <i> This project demonstrates static web scraping using Python.
+                It extracts structured data from HTML pages using BeautifulSoup and Requests.
+                Focus is on parsing DOM structure and collecting meaningful information.</i>
+        </p>
+
+    </section>
+    <!-- ==========================
+        SCRAPERS SECTION
+========================== -->
+    <section class="categories">
+
+        <!-- Spotify -->
+        <div class="project-card">
+
+            <h3> Spotify Web Scraper 🎧</h3>
+
+            <p>
+                Extract artist names and profile links from Spotify pages using
+                BeautifulSoup and Requests.
+            </p>
+
+            <div class="button-group">
+
+                <a href="/spotify" class="explore-btn">
+                    Explore
+                </a>
+
+                <a href="{{ url_for('download_spotify') }}" class="explore-btn csv-btn">
+                    CSV  ⬇
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Top Companies -->
+        <div class="project-card">
+
+            <h3> Top Companies Scraper 🏢</h3>
+
+            <p>
+                Scrape company names, ratings, locations, and workplace insights
+                from AmbitionBox.
+            </p>
+
+            <div class="button-group">
+
+                <a href="/companies" class="explore-btn">
+                    Explore
+                </a>
+                 <a href="{{ url_for('download_topcompanies_data') }}" class="explore-btn csv-btn">
+                    CSV  ⬇
+                </a>
+
+            
+
+            </div>
+
+        </div>
+
+        <!-- Steam -->
+        <div class="project-card">
+
+            <h3>Steam Games Scraper 🎮 </h3>
+
+            <p>
+                Collect Steam game titles, prices, release dates, and cover images.
+            </p>
+
+            <div class="button-group">
+
+                <a href="/steam" class="explore-btn">
+                    Explore
+                </a>
+
+                <a href="{{ url_for('download_stream_games') }}" class="explore-btn csv-btn">
+                    CSV  ⬇
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Anime -->
+        <div class="project-card">
+
+            <h3>🌀 Anime Info Scraper</h3>
+
+            <p>
+                Extract top anime rankings, scores, titles, and links from MyAnimeList.
+            </p>
+
+            <div class="button-group">
+
+                <a href="/anime" class="explore-btn">
+                    Explore
+                </a>
+                 <a href="{{ url_for('download_animes_data') }}" class="explore-btn csv-btn">
+                    CSV  ⬇
+                </a>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Goodreads Quotes -->
+        <div class="project-card">
+
+            <h2>💬 Goodreads Quotes</h2>
+
+            <p>
+                Scrape inspirational quotes, authors,
+                likes, and images from Goodreads.
+            </p>
+
+            <a href="{{ url_for('quotes') }}" class="explore-btn">
+                Explore
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- OUTPUT SECTION -->
+     </body>
+</html>

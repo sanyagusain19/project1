@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Global Disaster Alerts</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/disasters.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <a href="{{ url_for('dynamicscraper') }}" class="back-btn">← Back</a>
+
+        <h1> Global Disaster Alerts 🌍</h1>
+
+        <p class="subtitle">
+            Live Earthquakes • Floods • Cyclones Data (Selenium Scraping)
+        </p>
+
+        <div class="table-box">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Event</th>
+                        <th>Location</th>
+                        <th>Date / Time</th>
+                        <th>Magnitude / Intensity</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    {% for d in disasters %}
+
+                    <tr>
+
+                        <td>{{ d.event }}</td>
+
+                        <td>{{ d.location }}</td>
+
+                        <td>{{ d.date }}</td>
+
+                        <td>{{ d.magnitude }}</td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
