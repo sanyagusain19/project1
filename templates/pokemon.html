@@ -7,119 +7,124 @@
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/pokemon.css') }}">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+    <div class="navbar">
 
-<div class="hero">
 
-    <h1>PokeS</h1>
-
-    <p>
-        Search, Explore and Discover your favourite Pokémon.
-    </p>
-
-    <form action="/pokemon" method="GET" class="search-box">
-
-        <input
-            type="text"
-            name="name"
-            placeholder="Search Pokémon..."
-            autocomplete="off"
-            value="{{ name if name else '' }}"
-        >
-
-        <button type="submit">
-            Search
-        </button>
-
-    </form>
-
+        
+           <a href="/apis" class="back-btn">
+    ← Back
+</a>
+      
 </div>
+        <div class="hero">
 
 
-{% if pokemon_data %}
+            <h1>PokeS</h1>
 
-<div class="pokemon-card">
+            <p>
+                Search, Explore and Discover your favourite Pokémon.
+            </p>
 
-    <div class="image-section">
-        <img src="{{ pokemon_data.image }}">
-    </div>
+            <form action="/pokemon" method="GET" class="search-box">
 
-    <div class="info-section">
+                <input type="text" name="name" autocomplete="off" value="{{ name if name else '' }}" name="pokemon"
+                    placeholder="Search Pokémon like Pikachu, Charizard, Eevee..." value="{{ pokemon_name or '' }}">
 
-        <h2>
-            {{ pokemon_data.name|capitalize }}
-            <span>#{{ pokemon_data.id }}</span>
-        </h2>
 
-        <div class="types">
+                <button type="submit">
+                    Search
+                </button>
 
-            {% for type in pokemon_data.types %}
-
-                <span class="type">
-                    {{ type }}
-                </span>
-
-            {% endfor %}
+            </form>
 
         </div>
 
-        <h3>Abilities</h3>
 
-        <div class="abilities">
+        {% if pokemon_data %}
 
-            {% for ability in pokemon_data.abilities %}
+        <div class="pokemon-card">
 
-                <span class="ability">
-                    {{ ability }}
-                </span>
+            <div class="image-section">
+                <img src="{{ pokemon_data.image }}">
+            </div>
 
-            {% endfor %}
+            <div class="info-section">
 
-        </div>
+                <h2>
+                    {{ pokemon_data.name|capitalize }}
+                    <span>#{{ pokemon_data.id }}</span>
+                </h2>
 
-        <div class="stats">
+                <div class="types">
 
-            <h3>Base Stats</h3>
+                    {% for type in pokemon_data.types %}
 
-            {% for stat, value in pokemon_data.stats.items() %}
+                    <span class="type">
+                        {{ type }}
+                    </span>
 
-            <div class="stat-row">
+                    {% endfor %}
 
-                <span class="stat-name">
-                    {{ stat.replace('_',' ')|title }}
-                </span>
-
-                <div class="progress">
-                    <div
-                        class="progress-fill"
-                        style="width: {{ value if value <= 100 else 100 }}%;">
-                    </div>
                 </div>
 
-                <span class="stat-value">
-                    {{ value }}
-                </span>
+                <h3>Abilities</h3>
+
+                <div class="abilities">
+
+                    {% for ability in pokemon_data.abilities %}
+
+                    <span class="ability">
+                        {{ ability }}
+                    </span>
+
+                    {% endfor %}
+
+                </div>
+
+                <div class="stats">
+
+                    <h3>Base Stats</h3>
+
+                    {% for stat, value in pokemon_data.stats.items() %}
+
+                    <div class="stat-row">
+
+                        <span class="stat-name">
+                            {{ stat.replace('_',' ')|title }}
+                        </span>
+
+                        <div class="progress">
+                            <div class="progress-fill" style="width: {{ value if value <= 100 else 100 }}%;">
+                            </div>
+                        </div>
+
+                        <span class="stat-value">
+                            {{ value }}
+                        </span>
+
+                    </div>
+
+                    {% endfor %}
+
+                </div>
 
             </div>
 
-            {% endfor %}
-
         </div>
 
-    </div>
+        {% elif name %}
 
-</div>
+        <div class="not-found">
+            Pokémon "{{ name }}" not found 😢
+        </div>
 
-{% elif name %}
-
-<div class="not-found">
-    Pokémon "{{ name }}" not found 😢
-</div>
-
-{% endif %}
+        {% endif %}
 
 </body>
+
 </html>

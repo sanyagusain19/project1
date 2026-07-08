@@ -11,6 +11,45 @@ body {
     max-width: 1200px;
     margin: auto;
 }
+.back-btn{
+
+    position:fixed;
+
+    top:30px;
+
+    left:30px;
+
+    padding:14px 28px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    background:rgba(255,255,255,.75);
+
+    color:#7C6CB7;
+
+    font-weight:600;
+
+    border:1px solid #EADCF9;
+
+    backdrop-filter:blur(12px);
+
+    transition:.3s;
+
+    z-index:100;
+
+}
+
+.back-btn:hover{
+
+    background:#f49ae1;
+
+    color:white;
+
+    transform:translateY(-3px);
+
+}
 
 /* title */
 h1 {

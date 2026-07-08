@@ -95,8 +95,17 @@ def download_stream_games():
 @app.route("/goodquotesscraper")
 def quotes():
     quote_data = goodreads()
-   
+    
     return render_template("goodquotesscraper.html", quote_data = quote_data)
+                           
+@app.route("/download/goodreads")
+def download_goodreads():
+    return send_from_directory(
+        "one.ipynb",
+        "goodreads",     
+        as_attachment=True
+    )
+   
 @app.route("/apis")
 def apis():
     return render_template("apis.html")
@@ -119,9 +128,9 @@ def movies():
     )
 @app.route("/weather")
 def weather():
-    lat = request.args.get("lat",type=float,default = 30.13)
-    lon = request.args.get("lon",type= float,default = 77.28)
-    weather_data = fetch_weather(lat, lon)
+    # lat = request.args.get("lat",type=float,default = 30.13)
+    # lon = request.args.get("lon",type= float,default = 77.28)
+    weather_data = fetch_weather(lat=30.13, lon=77.28)
     return render_template("weather.html", weather=weather_data)
 
 @app.route("/pokemon")
@@ -163,10 +172,17 @@ def topS():
     return render_template("top_songs.html", songs = top_songs)
 @app.route("/disasters")
 def disasters():
-
     data = fetch_disasters()
-
     return render_template("disasters.html", disasters=data)
+
+@app.route("/minorprojects")
+def minorprojects():
+    return render_template("minorprojects.html")
+
+@app.route("/minor/churn")
+def churn_project():
+    return render_template("minor/index.html")
+
 if (__name__ == "__main__"):
     app.run(host = "0.0.0.0", port = 5000, debug = True)  # host, port are optional, change in file server restart ->debug = true
     

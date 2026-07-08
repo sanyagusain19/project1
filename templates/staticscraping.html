@@ -9,13 +9,14 @@
 </head>
 
 <body>
-
+  
     <!-- NAVBAR -->
     <div class="navbar">
 
 
-
-
+<div class="back-btn">
+    <a href="/webscraping">Back</a>
+</div>
         <!-- CENTER LOGO -->
         <div class="logo">
             ✨ <i> Static Scraping </i>
@@ -69,6 +70,9 @@
                 <a href="{{ url_for('download_spotify') }}" class="explore-btn csv-btn">
                     CSV  ⬇
                 </a>
+                         <a href="https://open.spotify.com/playlist/37i9dQZEVXbMDoHDwVN2tF""target="_blank" class="explore-btn original-btn">
+        Original Site 🌐 
+    </a>
 
             </div>
 
@@ -92,6 +96,10 @@
                  <a href="{{ url_for('download_topcompanies_data') }}" class="explore-btn csv-btn">
                     CSV  ⬇
                 </a>
+                <a href="https://www.ambitionbox.com/list-of-companies?page=1"target="_blank" class="explore-btn original-btn">
+        Original Site 🌐 
+    </a>
+
 
             
 
@@ -117,7 +125,9 @@
                 <a href="{{ url_for('download_stream_games') }}" class="explore-btn csv-btn">
                     CSV  ⬇
                 </a>
-
+           <a href="https://store.steampowered.com/search/?filter=popularnew"target="_blank" class="explore-btn original-btn">
+        Original Site 🌐 
+    </a>
             </div>
 
         </div>
@@ -139,6 +149,9 @@
                  <a href="{{ url_for('download_animes_data') }}" class="explore-btn csv-btn">
                     CSV  ⬇
                 </a>
+                    <a href=https://myanimelist.net/topanime.php?limit=0"target="_blank" class="explore-btn original-btn">
+        Original Site 🌐 
+    </a>
 
 
             </div>
@@ -160,6 +173,13 @@
             <a href="{{ url_for('quotes') }}" class="explore-btn">
                 Explore
             </a>
+             <a href="{{ url_for('download_goodreads') }}" class="explore-btn csv-btn">
+                    CSV  ⬇
+                </a>
+                    <a href="https://www.goodreads.com/quotes"target="_blank" class="explore-btn original-btn">
+        Original Site 🌐 
+    </a>
+
 
         </div>
 

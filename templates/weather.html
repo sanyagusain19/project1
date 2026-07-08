@@ -3,6 +3,7 @@
 
 <head>
 
+
     <meta charset="UTF-8">
     <title>SkyCast</title>
 
@@ -16,29 +17,32 @@
 </head>
 
 <body>
+      <div class="navbar">
+
+
+<div class="back-btn">
+    <a href="/apis">Back</a>
+</div>
 
     <div class="container">
 
-        <h1>☀ SkyCast</h1>
+        <h1>WeatherScope ☀</h1>
 
         <p class="subtitle">
-            Beautiful Weather Forecast
+            Yamuna Nagar • Haryana
         </p>
 
-        <form method="GET">
+     <div class="location-box">
 
-            <div class="input-group">
+    <h2> Yamuna Nagar, Haryana</h2>
 
-                <input type="number" step="any" name="lat" placeholder="Latitude" value="{{ latitude }}">
+    <p>7-Day Weather Forecast</p>
 
-                <input type="number" step="any" name="lon" placeholder="Longitude" value="{{ longitude }}">
-            </div>
+    <a href="{{ url_for('weather') }}" class="refresh-btn">
+         Refresh Forecast 🔄
+    </a>
 
-            <button>
-                🔍 Get Forecast
-            </button>
-
-        </form>
+</div>
 
         {% if weather %}
 
@@ -48,16 +52,31 @@
 
             <div class="card">
 
-             {{ weather["dayOfWeek"][i] }}
+    <div class="weather-icon">
+        🌧️
+    </div>
 
-             {{ weather["temperatureMax"][i] }}
+    <h2>{{ weather["dayOfWeek"][i] }}</h2>
 
-             {{ weather["temperatureMin"][i] }}
+    <div class="temp">
 
-             {{ weather["narrative"][i] }}
+        <span class="high">
+            {{ weather["temperatureMax"][i] }}°
+        </span>
 
-            </div>
+        <span class="low">
+            {{ weather["temperatureMin"][i] }}°
+        </span>
 
+    </div>
+
+    <p class="forecast">
+
+        {{ weather["narrative"][i] }}
+
+    </p>
+
+</div>
             {% endfor %}
 
         </div>

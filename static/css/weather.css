@@ -34,9 +34,10 @@ body{
 
     width:95%;
 
-    max-width:1200px;
+    max-width:1200opx;
 
-    background:rgba(255,255,255,.18);
+    background: rgba(255, 236, 244, 0.55);
+    border: 1px solid rgba(255,255,255,.45);
 
     backdrop-filter:blur(20px);
 
@@ -47,7 +48,7 @@ body{
     box-shadow:
     0 15px 40px rgba(0,0,0,.15);
 
-    border:1px solid rgba(255,255,255,.3);
+   
 
 }
 
@@ -55,7 +56,7 @@ h1{
 
     text-align:center;
 
-    color:white;
+     color:#8A4F74;
 
     font-size:3rem;
 
@@ -65,11 +66,17 @@ h1{
 
 }
 
+
 .subtitle{
 
     text-align:center;
 
-    color:#eef7ff;
+ 
+
+    color:#7E6A89;
+
+
+
 
     margin-top:10px;
 
@@ -88,6 +95,177 @@ form{
     align-items:center;
 
     gap:20px;
+
+}
+.location-box{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.location-box h2{
+
+    color:white;
+
+    font-size:2rem;
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+}
+
+.location-box p{
+
+    color:#eef7ff;
+
+    font-size:1rem;
+
+    margin-bottom:20px;
+
+}
+.refresh-btn{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    padding:16px 40px;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        135deg,
+        #D88AB2,
+        #B67EE8
+    );
+
+    color:white;
+
+    font-weight:600;
+
+    font-size:17px;
+
+    box-shadow:
+    0 10px 25px rgba(190,120,180,.3);
+
+    transition:.35s;
+}
+
+.refresh-btn:hover{
+
+    transform:translateY(-4px);
+
+    background:linear-gradient(
+        135deg,
+        #C76A9F,
+        #9E63DD
+    );
+
+    box-shadow:
+    0 15px 30px rgba(190,120,180,.45);
+
+}
+.back-btn{
+
+    position:absolute;
+
+    left:35px;
+
+    top:35px;
+
+    padding:14px 28px;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        135deg,
+        #F7B6D2,
+        #E7C7FF
+    );
+
+    color:#7A4679;
+
+    font-weight:600;
+
+    box-shadow:
+    0 8px 20px rgba(180,120,170,.25);
+
+    transition:.35s;
+}
+
+.back-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:linear-gradient(
+        135deg,
+        #E89ABB,
+        #D4A7FF
+    );
+
+    color:white;
+
+}
+.weather-icon{
+
+    font-size:42px;
+
+    text-align:center;
+
+    margin-bottom:12px;
+
+}
+
+.temp{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin:15px 0;
+
+}
+
+.high{
+
+    color:#FF9A3C;
+
+    font-size:42px;
+
+    font-weight:700;
+
+}
+
+.low{
+
+    font-size:24px;
+
+    color:#dbefff;
+
+}
+body{
+    background: linear-gradient(
+        135deg,
+        #F8DCE8,
+        #F5D5E6,
+        #E8D6F8
+    );
+}
+
+.forecast{
+
+    color:#3d3244;
+
+    line-height:1.8;
+
+    font-size:16px;
 
 }
 
@@ -132,30 +310,15 @@ input:focus{
     box-shadow:0 8px 20px rgba(0,0,0,.15);
 
 }
-
 button{
-
-    padding:15px 45px;
-
-    border:none;
-
-    border-radius:50px;
-
-    background:#2f80ed;
-
-    color:white;
-
-    font-size:17px;
-
-    font-weight:600;
-
-    cursor:pointer;
-
-    transition:.3s;
-
+    background: linear-gradient(135deg,#D98CB3,#B784E3);
 }
 
 button:hover{
+    background: linear-gradient(135deg,#C96C9D,#A76AE8);
+}
+
+/* button:hover{
 
     background:#1366d6;
 
@@ -163,7 +326,7 @@ button:hover{
 
     box-shadow:0 10px 25px rgba(19,102,214,.4);
 
-}
+} */
 
 .forecast{
 
@@ -180,22 +343,15 @@ button:hover{
 
 .card{
 
-    background:rgba(255,255,255,.22);
+    background:#FFF5FA;
 
-    backdrop-filter:blur(15px);
+    border:1px solid #F3D8E7;
 
-    border-radius:22px;
+    color:#53445A;
 
-    padding:25px;
+    border-radius:24px;
 
-    border:1px solid rgba(255,255,255,.25);
-
-    transition:.35s;
-
-    color:white;
-
-    box-shadow:
-    0 10px 25px rgba(0,0,0,.08);
+    padding:28px;
 
 }
 
@@ -211,9 +367,11 @@ button:hover{
 
 .card h2{
 
-    font-size:1.5rem;
+    color:#594A66;
 
-    margin-bottom:12px;
+    font-size:34px;
+
+    margin:15px 0;
 
 }
 
@@ -229,11 +387,13 @@ button:hover{
 
 .card p{
 
+    color:#5F4B66;
+
+    font-size:15px;
+
     line-height:1.7;
 
-    font-size:.95rem;
-
-    color:#f6fbff;
+    font-weight:500;
 
 }
 
@@ -290,5 +450,28 @@ button:hover{
         width:100%;
 
     }
+
+}
+.card{
+
+    color:#4A3F55;
+
+}
+
+.subtitle{
+
+    color:#6F5B7B;
+
+}
+
+.location-box h2{
+
+    color:#533B4D;
+
+}
+
+.location-box p{
+
+    color:#7A6677;
 
 }
