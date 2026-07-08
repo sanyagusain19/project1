@@ -15,6 +15,8 @@ def top_companies_scraper():
     }
 
     response = requests.get(url, headers=headers)
+    if response.status_code != 200:
+        raise Exception(f"AmbitionBox returned {response.status_code}")
 
     soup = BeautifulSoup(response.text, "html.parser")
 
