@@ -182,6 +182,9 @@ def minorprojects():
 @app.route("/minor/churn")
 def churn_project():
     return render_template("minor/index.html")
+@app.route("/powerbi")
+def powerbi():
+    return render_template("powerbi.html")
 
 if (__name__ == "__main__"):
     app.run(host = "0.0.0.0", port = 5000, debug = True)  # host, port are optional, change in file server restart ->debug = true

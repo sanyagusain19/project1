@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Power BI Dashboards | My Portfolio</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/powerbi.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ==========================
+            NAVBAR
+    =========================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            My Portfolio
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+
+            <a href="/projects">Projects</a>
+
+            <a href="/powerbi" class="active">Power BI</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ==========================
+            HERO
+    =========================== -->
+
+    <section class="hero">
+
+        <span class="tag">
+            📊 Dashboard Collection
+        </span>
+
+        <h1>
+            Power BI Dashboards
+        </h1>
+
+        <p>
+            Interactive dashboards created using Power BI, DAX, Power Query,
+            and data visualization techniques to convert raw data into
+            meaningful business insights.
+        </p>
+
+    </section>
+
+
+    <!-- ==========================
+            DASHBOARD CARD
+    =========================== -->
+
+    <section class="categories">
+
+    <div class="project-card">
+
+        <div class="emoji">
+            📊
+        </div>
+
+        <h2>Mobile Sales Dashboard</h2>
+
+        <p>
+            An interactive Power BI dashboard built for mobile sales analysis.
+            It includes KPI cards, monthly sales trends, customer ratings,
+            payment methods, city-wise analysis and brand performance.
+        </p>
+
+        <div class="count">
+            Power BI • DAX • Power Query
+        </div>
+
+        <a href="{{ url_for('static', filename='img/mobile_sales_dashboard.png') }}"
+           target="_blank"
+           class="explore-btn">
+
+            View Dashboard
+
+        </a>
+
+    </div>
+
+</section>
+
+    <!-- ==========================
+            FOOTER
+    =========================== -->
+
+    <footer>
+
+        Made with ❤️ by SANIYA
+
+    </footer>
+
+</body>
+
+</html>
