@@ -25,20 +25,19 @@ def top_companies_scraper():
 
     for company in company_cards:
 
-        # Company Name
+        
         name = company.find("h2").get_text(strip=True)
 
-        # Rating
         rating = company.find(
             "span",
             class_="companyCardWrapper__companyRatingCount"
         ).get_text(strip=True)
 
-        # Location
+       
         spans = company.find_all("span")
         location = spans[2].get_text(strip=True) if len(spans) > 2 else "NA"
 
-        # Rating Values
+     
         rating_values = company.find_all(
             "span",
             class_="companyCardWrapper__ratingValues"
