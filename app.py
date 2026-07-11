@@ -18,7 +18,6 @@ from dynamic.hackernews import fetch_hackernews
 from dynamic.top_songs import fetch_top_songs
 from dynamic.disasters import fetch_disasters
 
-
 @app.route("/")
 def home():
     return render_template ("home.html")
@@ -185,6 +184,7 @@ def churn_project():
 @app.route("/powerbi")
 def powerbi():
     return render_template("powerbi.html")
+
 
 if (__name__ == "__main__"):
     app.run(host = "0.0.0.0", port = 5000, debug = True)  # host, port are optional, change in file server restart ->debug = true
