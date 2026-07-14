@@ -1,0 +1,142 @@
+[
+  {
+    "name": "TCS",
+    "rating": "(1.2L)",
+    "location": "IT Services & Consulting | Bengaluru +448 other locations",
+    "best_rated_for": "Job Security",
+    "worst_rated_for": "Promotions, Salary, Work Satisfaction"
+  },
+  {
+    "name": "Accenture",
+    "rating": "(75.3k)",
+    "location": "IT Services & Consulting | Bengaluru +261 other locations",
+    "best_rated_for": "Promotions, Salary, Work Satisfaction",
+    "worst_rated_for": "NA"
+  },
+  {
+    "name": "Wipro",
+    "rating": "(66.5k)",
+    "location": "IT Services & Consulting | Hyderabad +375 other locations",
+    "best_rated_for": "Promotions, Salary, Work Satisfaction",
+    "worst_rated_for": "NA"
+  },
+  {
+    "name": "Cognizant",
+    "rating": "(62.7k)",
+    "location": "IT Services & Consulting | Hyderabad +233 other locations",
+    "best_rated_for": "Promotions, Salary, Work Satisfaction",
+    "worst_rated_for": "NA"
+  },
+  {
+    "name": "Capgemini",
+    "rating": "(54.8k)",
+    "location": "IT Services & Consulting | Bengaluru +188 other locations",
+    "best_rated_for": "Work Life Balance, Job Security",
+    "worst_rated_for": "Promotions, Salary, Work Satisfaction"
+  },
+  {
+    "name": "HDFC Bank",
+    "rating": "(53.9k)",
+    "location": "Banking | Mumbai +1866 other locations",
+    "best_rated_for": "Job Security, Skill Development",
+    "worst_rated_for": "Promotions, Salary"
+  },
+  {
+    "name": "Infosys",
+    "rating": "(50k)",
+    "location": "(50k)",
+    "best_rated_for": "Job Security",
+    "worst_rated_for": "Promotions, Salary, Work Satisfaction"
+  },
+  {
+    "name": "HCLTech",
+    "rating": "(47.1k)",
+    "location": "IT Services & Consulting | Chennai +232 other locations",
+    "best_rated_for": "Promotions, Salary, Work Satisfaction",
+    "worst_rated_for": "NA"
+  },
+  {
+    "name": "ICICI Bank",
+    "rating": "(46.8k)",
+    "location": "Banking | Mumbai +1452 other locations",
+    "best_rated_for": "Job Security, Promotions, Skill Development",
+    "worst_rated_for": "NA"
+  },
+  {
+    "name": "Tech Mahindra",
+    "rating": "(44.3k)",
+    "location": "IT Services & Consulting | Hyderabad +323 other locations",
+    "best_rated_for": "Promotions, Salary, Work Satisfaction",
+    "worst_rated_for": "NA"
+  },
+  {
+    "name": "Genpact",
+    "rating": "(43.5k)",
+    "location": "Analytics & KPO | Hyderabad +181 other locations",
+    "best_rated_for": "Job Security",
+    "worst_rated_for": "Promotions, Salary, Work Satisfaction"
+  },
+  {
+    "name": "TP",
+    "rating": "(39.7k)",
+    "location": "(39.7k)",
+    "best_rated_for": "Work Life Balance, Job Security, Skill Development",
+    "worst_rated_for": "NA"
+  },
+  {
+    "name": "Axis Bank",
+    "rating": "(34.2k)",
+    "location": "Banking | Mumbai +1535 other locations",
+    "best_rated_for": "Promotions, Work Satisfaction, Company Culture",
+    "worst_rated_for": "NA"
+  },
+  {
+    "name": "Jio",
+    "rating": "(34.1k)",
+    "location": "Telecom | Mumbai +1967 other locations",
+    "best_rated_for": "Job Security, Skill Development, Company Culture",
+    "worst_rated_for": "NA"
+  },
+  {
+    "name": "Concentrix Corporation",
+    "rating": "(33k)",
+    "location": "BPO | Bengaluru +185 other locations",
+    "best_rated_for": "Job Security",
+    "worst_rated_for": "Promotions, Salary, Work Satisfaction"
+  },
+  {
+    "name": "Amazon",
+    "rating": "(32.4k)",
+    "location": "Internet | Bengaluru +520 other locations",
+    "best_rated_for": "Company Culture, Work Life Balance, Salary",
+    "worst_rated_for": "Promotions"
+  },
+  {
+    "name": "Reliance Retail",
+    "rating": "(27.8k)",
+    "location": "(27.8k)",
+    "best_rated_for": "Job Security, Skill Development, Work Life Balance",
+    "worst_rated_for": "Promotions"
+  },
+  {
+    "name": "iEnergizer",
+    "rating": "(27.5k)",
+    "location": "(27.5k)",
+    "best_rated_for": "Company Culture, Work Life Balance, Work Satisfaction",
+    "worst_rated_for": "NA"
+  },
+  {
+    "name": "LTM Limited",
+    "rating": "(27k)",
+    "location": "IT Services & Consulting | Bengaluru +146 other locations",
+    "best_rated_for": "Promotions, Salary, Work Satisfaction",
+    "worst_rated_for": "NA"
+  },
+  {
+    "name": "HDB Financial Services",
+    "rating": "(26.3k)",
+    "location": "NBFC | Mumbai +1100 other locations",
+    "best_rated_for": "Promotions, Salary",
+    "worst_rated_for": "NA"
+  }
+]

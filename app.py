@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, send_from_directory
+import json
 app = Flask(__name__)  #contains main 
 
 
@@ -37,11 +38,11 @@ def webscraping():
 @app.route("/staticscraping")
 def staticscraping():
     return render_template("staticscraping.html")
-
 @app.route("/topcompaniesscraper")
 def topcompaniesscraper():
-    companies = top_companies_scraper()
-    return render_template("topcompaniesscraper.html", companies = companies)
+    with open("companies_data.json", "r", encoding="utf-8") as f:
+        companies = json.load(f)
+    return render_template("topcompaniesscraper.html", companies=companies)
 @app.route("/download/topcompanies")
 def download_topcompanies_data():
     return send_from_directory(
