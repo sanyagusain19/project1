@@ -24,7 +24,7 @@ def goodreads():
 
           "author": title,
 
-         "likes": footer_details,
+         
 
          "image_url": image_url
 
