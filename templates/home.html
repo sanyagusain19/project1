@@ -15,11 +15,11 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }}"> -->
 
 </head>
 
-<body>
-
+<body class="page-enter">
     <!-- ================= NAVBAR ================= -->
 
     <nav class="navbar">
@@ -37,6 +37,14 @@
             <a href="/about">About</a>
 
             <a href="/projects">Projects</a>
+            <a href="{{ url_for('github_page') }}" class="explore-btn">
+        GitHub Dashboard →
+    </a>
+        <div class="button-group">
+
+    
+
+</div>
 
         </div>
 

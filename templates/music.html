@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Music Recommendation System</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/music.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- =======================
+        NAVBAR
+======================= -->
+
+<nav class="navbar">
+
+    <div class="logo">
+
+        🎵 Music Project
+
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/">Home</a>
+
+        <a href="/minorprojects">Minor Projects</a>
+
+        <a href="/projects">Projects</a>
+
+    </div>
+
+</nav>
+
+<!-- =======================
+        HERO
+======================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="tag">
+
+            Machine Learning • Flask • Recommendation System
+
+        </span>
+
+        <h1>
+
+            Music Recommendation System
+
+        </h1>
+
+        <h3>
+
+            From an idea inspired by music to a Machine Learning application.
+
+        </h3>
+
+        <p>
+
+            A personalized mood-based recommendation engine that suggests
+            songs using Machine Learning and Euclidean Distance.
+            This project combines my passion for music with my curiosity
+            for Artificial Intelligence to create meaningful recommendations.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="https://music-recommendor-u01n.onrender.com"
+               target="_blank"
+               class="primary-btn">
+
+                🌐 Live Demo
+
+            </a>
+
+            <a href="https://github.com/sanyagusain19/music_recommendor"
+               target="_blank"
+               class="secondary-btn">
+
+                💻 GitHub
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<div class="project-image">
+
+    <img
+        src="{{ url_for('static', filename='img/Screenshot 2026-07-19 213900.png') }}"
+        alt="Music Recommendation Home">
+
+</div>
+
+<!-- =======================
+     STORY SECTION
+======================= -->
+
+<section class="story">
+
+    <div class="story-card">
+
+        <span class="small-title">
+
+            🎧 It Started With A Playlist
+
+        </span>
+
+        <h2>
+
+            Every Great Project Starts With Curiosity
+
+        </h2>
+
+        <p>
+
+            Music has always been a part of my everyday life.
+
+            Whether I was studying late at night,
+            taking a walk, or simply relaxing,
+            there was always a playlist that perfectly matched my mood.
+
+        </p>
+
+        <p>
+
+            One evening, while switching between different playlists,
+            I found myself wondering...
+
+        </p>
+
+        <blockquote>
+
+            "What if an application could understand
+            someone's mood and recommend songs automatically?"
+
+        </blockquote>
+
+        <p>
+
+            That simple question became the beginning
+            of this project.
+
+            Instead of creating another playlist application,
+            I wanted to understand how recommendation systems
+            actually work and build one from scratch.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =======================
+       PROBLEM
+======================= -->
+
+<section class="problem">
+
+<h2>
+
+🎯 The Problem
+
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+
+Millions of Songs
+
+</h3>
+
+<p>
+
+With countless songs available across platforms,
+finding the perfect song for your current mood
+can become overwhelming.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+Traditional Recommendations
+
+</h3>
+
+<p>
+
+Most music platforms recommend songs based on
+listening history, popularity or trending content.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+My Question
+
+</h3>
+
+<p>
+
+Can music be recommended
+purely based on emotions
+rather than popularity?
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =======================
+       IDEA
+======================= -->
+
+<section class="idea">
+
+<h2>
+
+💡 The Idea
+
+</h2>
+
+<div class="idea-container">
+
+<div class="idea-text">
+
+<p>
+
+Instead of relying on complex recommendation engines,
+I wanted to understand the fundamentals.
+
+The goal was to create a recommendation system that
+accepts a user's mood and suggests songs with
+similar musical characteristics.
+
+</p>
+
+<p>
+
+This project helped me explore
+Machine Learning,
+feature similarity,
+recommendation systems
+and Flask deployment while
+building something connected
+to one of my biggest interests—music.
+
+</p>
+
+</div>
+
+<div class="flow">
+
+<div class="flow-box">
+
+😊 User Mood
+
+</div>
+
+↓
+
+<div class="flow-box">
+
+Machine Learning
+
+</div>
+
+↓
+
+<div class="flow-box">
+
+Euclidean Distance
+
+</div>
+
+↓
+
+<div class="flow-box">
+
+Recommended Songs 🎵
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =======================
+NEXT PART STARTS HERE
+======================= -->
+
+<!-- =======================
+    DEVELOPMENT JOURNEY
+======================= -->
+
+<section class="journey">
+
+    <div class="section-heading">
+
+        <span>🚀 My Development Journey</span>
+
+        <h2>Turning Curiosity into Code</h2>
+
+        <p>
+            Every project begins with an idea, but transforming that idea
+            into a working application requires planning, learning,
+            experimentation and continuous improvement.
+        </p>
+
+    </div>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>🐍 Learning Python</h3>
+                <p>
+                    My journey started with Python, where I built a strong
+                    foundation in programming, data structures and problem solving.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>💡 Problem Scoping</h3>
+                <p>
+                    Instead of building another generic music player,
+                    I wanted to solve a real problem:
+                    helping users discover songs based on their emotions.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>📂 Dataset Collection</h3>
+                <p>
+                    I explored publicly available music datasets containing
+                    song attributes like energy, tempo, danceability,
+                    acousticness, popularity and valence.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>📊 Exploratory Data Analysis</h3>
+                <p>
+                    I analyzed the dataset to understand relationships
+                    between musical features, identify missing values,
+                    duplicates and overall data quality.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>🧹 Data Cleaning</h3>
+                <p>
+                    Removed duplicate records,
+                    handled missing values,
+                    selected useful features
+                    and prepared the dataset
+                    for recommendation.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>😊 Mood Mapping</h3>
+                <p>
+                    Songs naturally don't come with mood labels.
+                    I mapped songs into moods based on their
+                    musical characteristics to create
+                    meaningful recommendations.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>📐 Choosing Euclidean Distance</h3>
+                <p>
+                    After exploring recommendation techniques,
+                    I selected Euclidean Distance because it measures
+                    similarity between songs using their numerical features.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>⚙ Recommendation Engine</h3>
+                <p>
+                    Built the recommendation logic that finds
+                    songs closest to the selected mood
+                    and generates personalized suggestions.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>🌐 Flask Integration</h3>
+                <p>
+                    Connected the recommendation model with
+                    Flask to build a responsive web application
+                    where users can interact with the system.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>🎨 Designing the Interface</h3>
+                <p>
+                    Focused on building a clean,
+                    user-friendly interface that
+                    makes discovering music enjoyable.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>🚀 Deployment</h3>
+                <p>
+                    Finally deployed the application online
+                    so anyone can experience the recommendation
+                    system directly from their browser.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<!-- =======================
+        DATASET
+======================= -->
+
+<section class="dataset">
+
+    <div class="section-heading">
+
+        <span>📂 Dataset</span>
+
+        <h2>Building the Foundation</h2>
+
+        <p>
+
+            A recommendation system is only as good as the data behind it.
+
+            Choosing the right dataset was one of the most important
+            decisions during development.
+
+        </p>
+
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>🎵 Song Features</h3>
+
+            <p>
+
+                Energy, Danceability,
+                Tempo, Valence,
+                Acousticness and Popularity.
+
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>📈 Why These Features?</h3>
+
+            <p>
+
+                These numerical features describe
+                the musical personality of every song,
+                making similarity calculations possible.
+
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>🎯 Goal</h3>
+
+            <p>
+
+                Convert raw song attributes
+                into meaningful mood-based
+                recommendations.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =======================
+      DATA PREPARATION
+======================= -->
+
+<section class="eda">
+
+    <div class="section-heading">
+
+        <span>📊 Data Preparation</span>
+
+        <h2>Understanding the Dataset</h2>
+
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>Exploratory Data Analysis</h3>
+
+            <p>
+
+                Explored feature distributions,
+                identified patterns,
+                checked correlations
+                and understood the dataset structure.
+
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Data Cleaning</h3>
+
+            <p>
+
+                Removed duplicate entries,
+                handled missing values
+                and selected only meaningful features.
+
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Feature Engineering</h3>
+
+            <p>
+
+                Prepared numerical attributes
+                for similarity calculations
+                and recommendation generation.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =======================
+      MOOD MAPPING
+======================= -->
+
+<section class="mood">
+
+    <div class="section-heading">
+
+        <span>😊 Mood Mapping</span>
+
+        <h2>Transforming Music into Emotions</h2>
+
+    </div>
+
+    <p class="center-text">
+
+        Since songs don't naturally come with mood labels,
+        I designed a simple mapping strategy that groups songs
+        according to their musical characteristics.
+
+    </p>
+
+    <div class="cards">
+
+        <div class="card">😊 Happy</div>
+
+        <div class="card">😌 Calm</div>
+
+        <div class="card">💪 Energetic</div>
+
+        <div class="card">❤️ Romantic</div>
+
+        <div class="card">💔 Sad</div>
+
+    </div>
+
+</section>
+<!-- =======================
+    WHY EUCLIDEAN DISTANCE
+======================= -->
+
+<section class="algorithm">
+
+    <div class="section-heading">
+
+        <span>📐 Recommendation Algorithm</span>
+
+        <h2>Why Euclidean Distance?</h2>
+
+        <p>
+
+            Choosing the right similarity algorithm was one of the most
+            important decisions while building this recommendation system.
+
+        </p>
+
+    </div>
+
+    <div class="algorithm-container">
+
+        <div class="algorithm-text">
+
+            <p>
+
+                Recommendation systems work by finding items that are
+                similar to one another.
+
+            </p>
+
+            <p>
+
+                After exploring different approaches, I chose
+                <strong>Euclidean Distance</strong> because it measures
+                the numerical similarity between songs using features like
+                energy, danceability, tempo, acousticness and valence.
+
+            </p>
+
+            <p>
+
+                Songs with the smallest distance are considered the
+                most similar and are recommended to the user.
+
+            </p>
+
+        </div>
+
+        <div class="formula">
+
+            <h3>Distance Formula</h3>
+
+            <h1>√((x₂-x₁)²+(y₂-y₁)²+...)</h1>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================
+      FLASK WORKFLOW
+======================= -->
+
+<section class="workflow">
+
+    <div class="section-heading">
+
+        <span>🌐 Flask Application</span>
+
+        <h2>How Everything Works</h2>
+
+    </div>
+
+    <div class="flow-grid">
+
+        <div class="flow-card">😊 User Selects Mood</div>
+
+        <div class="arrow">↓</div>
+
+        <div class="flow-card">🌐 Flask Receives Request</div>
+
+        <div class="arrow">↓</div>
+
+        <div class="flow-card">🤖 Recommendation Engine</div>
+
+        <div class="arrow">↓</div>
+
+        <div class="flow-card">📐 Euclidean Distance</div>
+
+        <div class="arrow">↓</div>
+
+        <div class="flow-card">🎵 Recommended Songs</div>
+
+    </div>
+
+</section>
+<div class="project-image">
+
+    <img
+    src="{{ url_for('static', filename='img/Screenshot 2026-07-19 213914.png') }}"
+    alt="Recommendation Results">
+
+</div>
+
+
+<!-- =======================
+        CHALLENGES
+======================= -->
+
+<section class="challenges">
+
+    <div class="section-heading">
+
+        <span>⚡ Challenges</span>
+
+        <h2>Problems I Solved</h2>
+
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>Dataset Selection</h3>
+
+            <p>
+
+                Finding a dataset containing meaningful audio features.
+
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Mood Mapping</h3>
+
+            <p>
+
+                Designing mood categories using musical characteristics.
+
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Recommendation Logic</h3>
+
+            <p>
+
+                Selecting an algorithm that balances simplicity,
+                speed and recommendation quality.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================
+        WHAT I LEARNED
+======================= -->
+
+<section class="learning">
+
+    <div class="section-heading">
+
+        <span>🌱 Learning Outcomes</span>
+
+        <h2>More Than Just Code</h2>
+
+    </div>
+
+    <div class="cards">
+
+        <div class="card">✔ Problem Scoping</div>
+
+        <div class="card">✔ Data Collection</div>
+
+        <div class="card">✔ Exploratory Data Analysis</div>
+
+        <div class="card">✔ Data Cleaning</div>
+
+        <div class="card">✔ Recommendation Systems</div>
+
+        <div class="card">✔ Feature Engineering</div>
+
+        <div class="card">✔ Flask Development</div>
+
+        <div class="card">✔ Deployment</div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================
+      FUTURE IMPROVEMENTS
+======================= -->
+
+<section class="future">
+
+    <div class="section-heading">
+
+        <span>🚀 Future Improvements</span>
+
+        <h2>What's Next?</h2>
+
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+
+            Spotify API Integration
+
+        </div>
+
+        <div class="card">
+
+            User Login System
+
+        </div>
+
+        <div class="card">
+
+            Personalized Playlists
+
+        </div>
+
+        <div class="card">
+
+            Deep Learning Recommendations
+
+        </div>
+
+        <div class="card">
+
+            Real-Time Song Suggestions
+
+        </div>
+
+        <div class="card">
+
+            Playlist Export
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================
+      FINAL THOUGHTS
+======================= -->
+
+<section class="reflection">
+
+    <div class="reflection-card">
+
+        <span>❤️ Final Thoughts</span>
+
+        <h2>
+
+            More Than A Machine Learning Project
+
+        </h2>
+
+        <p>
+
+            Building this recommendation system taught me that Machine
+            Learning isn't just about algorithms—it's about solving
+            real-world problems in meaningful ways.
+
+        </p>
+
+        <p>
+
+            Combining my love for music with Artificial Intelligence made
+            this one of the most enjoyable projects I've worked on.
+            Every stage—from problem scoping and dataset exploration to
+            deployment—strengthened my understanding of recommendation
+            systems and software development.
+
+        </p>
+
+        <p>
+
+            This project represents an important milestone in my learning
+            journey and motivates me to continue exploring Deep Learning,
+            Artificial Intelligence and intelligent recommendation systems.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =======================
+      BUTTONS
+======================= -->
+
+<section class="buttons">
+
+    <a href="https://music-recommendor-u01n.onrender.com"
+       target="_blank"
+       class="primary-btn">
+
+        🌐 Live Demo
+
+    </a>
+
+    <a href="https://github.com/sanyagusain19/music_recommendor"
+       target="_blank"
+       class="secondary-btn">
+
+        💻 GitHub Repository
+
+    </a>
+
+    <a href="/minorprojects"
+       class="secondary-btn">
+
+        ⬅ Back to Minor Projects
+
+    </a>
+
+</section>
+
+
+<!-- =======================
+        FOOTER
+======================= -->
+
+<footer>
+
+    <h2>Thanks for Reading ❤️</h2>
+
+    <p>
+
+        Every project begins with curiosity.
+        This one began with music.
+
+    </p>
+
+</footer>
+
+</body>
+
+</html>
+</body>
+
+</html>

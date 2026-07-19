@@ -1,0 +1,1084 @@
+/* ===================================
+        GITHUB PAGE CSS - PART 1
+=================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+.contribution-wrapper{
+    margin: 40px auto 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contribution-wrapper img{
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,.1);
+    box-shadow: 0 20px 40px rgba(0,0,0,.35);
+}
+
+.github-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 60px 0;
+}
+
+.github-btn{
+    padding: 14px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg,#7c3aed,#ec4899);
+    transition: .3s;
+}
+
+.github-btn:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(124,58,237,.4);
+}
+:root{
+
+    --bg:#FFFDFB;
+    --bg2:#FFF7FA;
+    --pink:#D98CB3;
+    --pink-light:#FFEAF3;
+    --purple:#CDB8FF;
+    --purple-light:#F4ECFF;
+    --text:#40333E;
+    --gray:#666;
+    --glass:rgba(255,255,255,.58);
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    min-height:100vh;
+    overflow-x:hidden;
+    color:var(--text);
+
+    background:
+    radial-gradient(circle at top left,#FFEAF3 0%,transparent 35%),
+    radial-gradient(circle at bottom right,#F4ECFF 0%,transparent 30%),
+    linear-gradient(
+        135deg,
+        #FFFDFB,
+        #FFF9F9,
+        #FFF6FB
+    );
+
+    position:relative;
+
+}
+
+/* ===================================
+        FLOATING BLOBS
+=================================== */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:480px;
+height:480px;
+
+border-radius:50%;
+
+background:#FFD8EC;
+
+top:-180px;
+left:-140px;
+
+filter:blur(120px);
+
+opacity:.6;
+
+z-index:-5;
+
+animation:blobOne 13s ease-in-out infinite;
+
+}
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+width:420px;
+height:420px;
+
+border-radius:50%;
+
+background:#E8D8FF;
+
+right:-140px;
+bottom:-140px;
+
+filter:blur(120px);
+
+opacity:.55;
+
+z-index:-5;
+
+animation:blobTwo 15s ease-in-out infinite;
+
+}
+
+@keyframes blobOne{
+
+0%,100%{
+
+transform:translate(0,0);
+
+}
+
+50%{
+
+transform:translate(55px,40px);
+
+}
+
+}
+
+@keyframes blobTwo{
+
+0%,100%{
+
+transform:translate(0,0);
+
+}
+
+50%{
+
+transform:translate(-60px,-40px);
+
+}
+
+}
+
+/* ===================================
+          FLOATING STARS
+=================================== */
+
+.stars{
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+z-index:-2;
+
+overflow:hidden;
+
+}
+
+.star{
+
+position:absolute;
+
+width:4px;
+height:4px;
+
+background:white;
+
+border-radius:50%;
+
+animation:twinkle 4s infinite;
+
+box-shadow:
+
+0 0 10px white,
+0 0 18px #FFD9EB;
+
+}
+
+.star:nth-child(1){top:8%;left:12%;animation-delay:0s;}
+.star:nth-child(2){top:18%;left:85%;animation-delay:1s;}
+.star:nth-child(3){top:40%;left:28%;animation-delay:2s;}
+.star:nth-child(4){top:65%;left:74%;animation-delay:3s;}
+.star:nth-child(5){top:82%;left:17%;animation-delay:1.5s;}
+.star:nth-child(6){top:52%;left:55%;animation-delay:.7s;}
+.star:nth-child(7){top:12%;left:60%;animation-delay:2.6s;}
+.star:nth-child(8){top:73%;left:90%;animation-delay:3.2s;}
+
+@keyframes twinkle{
+
+0%,100%{
+
+opacity:.25;
+transform:scale(.6);
+
+}
+
+50%{
+
+opacity:1;
+transform:scale(1.8);
+
+}
+
+}
+
+/* ===================================
+        NAVBAR
+=================================== */
+
+.navbar{
+
+width:90%;
+
+max-width:1200px;
+
+margin:25px auto;
+
+padding:18px 30px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(255,255,255,.62);
+
+backdrop-filter:blur(18px);
+
+border-radius:24px;
+
+border:1px solid rgba(255,255,255,.7);
+
+box-shadow:
+
+0 15px 35px rgba(0,0,0,.05);
+
+animation:slideDown .8s ease;
+
+}
+
+.logo{
+
+font-size:28px;
+
+font-weight:700;
+
+color:#5A4566;
+
+letter-spacing:.8px;
+
+}
+
+.nav-links{
+
+display:flex;
+
+gap:18px;
+
+}
+
+.nav-links a{
+
+text-decoration:none;
+
+padding:12px 26px;
+
+border-radius:40px;
+
+background:white;
+
+color:#666;
+
+font-weight:600;
+
+transition:.35s;
+
+}
+
+.nav-links a:hover{
+
+background:#D98CB3;
+
+color:white;
+
+transform:translateY(-3px);
+
+box-shadow:
+
+0 15px 30px rgba(217,140,179,.35);
+
+}
+
+/* ===================================
+            HERO
+=================================== */
+
+.github-hero{
+
+width:90%;
+
+max-width:1200px;
+
+margin:80px auto 70px;
+
+text-align:center;
+
+animation:fadeUp 1s ease;
+
+}
+
+.badge{
+
+display:inline-block;
+
+padding:10px 24px;
+
+background:#FFEAF3;
+
+color:#C35D93;
+
+border-radius:50px;
+
+font-weight:600;
+
+margin-bottom:22px;
+
+letter-spacing:.6px;
+
+}
+
+.github-hero h1{
+
+font-size:62px;
+
+line-height:1.2;
+
+margin-bottom:22px;
+
+background:
+
+linear-gradient(
+90deg,
+#D98CB3,
+#B18DFF,
+#D98CB3);
+
+background-size:250%;
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+animation:gradientMove 6s linear infinite;
+
+}
+
+@keyframes gradientMove{
+
+to{
+
+background-position:250%;
+
+}
+
+}
+
+.github-hero p{
+
+max-width:720px;
+
+margin:auto;
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#666;
+
+}
+
+/* ===================================
+      GITHUB STATS GRID
+=================================== */
+
+.stats-grid{
+
+width:90%;
+
+max-width:1250px;
+
+margin:70px auto;
+
+display:grid;
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(350px,1fr));
+
+gap:35px;
+
+}
+
+/* ===================================
+            CARD
+=================================== */
+
+.github-card{
+
+background:var(--glass);
+
+backdrop-filter:blur(18px);
+
+border-radius:28px;
+
+padding:28px;
+
+box-shadow:
+
+0 15px 35px rgba(0,0,0,.06);
+
+border:1px solid rgba(255,255,255,.65);
+
+transition:.45s;
+
+position:relative;
+
+overflow:hidden;
+
+animation:fadeUp 1s ease;
+
+}
+
+.github-card::before{
+
+content:"";
+
+position:absolute;
+
+width:180px;
+height:180px;
+
+border-radius:50%;
+
+background:
+
+linear-gradient(
+135deg,
+rgba(255,234,243,.6),
+rgba(232,216,255,.6));
+
+right:-70px;
+top:-70px;
+
+transition:.5s;
+
+}
+
+.github-card:hover::before{
+
+transform:scale(1.35);
+
+}
+
+.github-card:hover{
+
+transform:
+
+translateY(-12px);
+
+box-shadow:
+
+0 30px 60px rgba(217,140,179,.18);
+
+}
+
+.github-card img{
+
+width:100%;
+
+border-radius:18px;
+
+transition:.5s;
+
+position:relative;
+
+z-index:2;
+
+}
+
+.github-card:hover img{
+
+transform:scale(1.03);
+
+}
+
+/* ===================================
+        FLOATING CARDS
+=================================== */
+
+.github-card:nth-child(1){
+
+animation:
+
+fadeUp .8s ease,
+float1 6s ease-in-out infinite;
+
+}
+
+.github-card:nth-child(2){
+
+animation:
+
+fadeUp .8s ease,
+float2 7s ease-in-out infinite;
+
+}
+
+.github-card:nth-child(3){
+
+animation:
+
+fadeUp .8s ease,
+float3 8s ease-in-out infinite;
+
+}
+
+@keyframes float1{
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+}
+
+@keyframes float2{
+
+50%{
+
+transform:translateY(12px);
+
+}
+
+}
+
+@keyframes float3{
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+}
+
+/* ===================================
+        SECTION TITLE
+=================================== */
+
+.section-title{
+
+text-align:center;
+
+font-size:42px;
+
+margin-top:120px;
+
+margin-bottom:60px;
+
+color:#40333E;
+
+position:relative;
+
+}
+
+.section-title::after{
+
+content:"";
+
+position:absolute;
+
+width:70px;
+height:4px;
+
+background:#D98CB3;
+
+left:50%;
+bottom:-15px;
+
+transform:translateX(-50%);
+
+border-radius:20px;
+
+}
+/* ===================================
+        ACHIEVEMENTS SECTION
+=================================== */
+
+.achievement-grid{
+
+width:90%;
+
+max-width:1200px;
+
+margin:70px auto;
+
+display:grid;
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(260px,1fr));
+
+gap:28px;
+
+}
+
+.achievement-card{
+
+background:rgba(255,255,255,.58);
+
+backdrop-filter:blur(18px);
+
+border-radius:28px;
+
+padding:35px;
+
+text-align:center;
+
+border:1px solid rgba(255,255,255,.65);
+
+box-shadow:
+
+0 15px 35px rgba(0,0,0,.06);
+
+transition:.4s;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.achievement-card::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(
+135deg,
+rgba(255,234,243,.5),
+rgba(232,216,255,.4)
+);
+
+opacity:0;
+
+transition:.4s;
+
+}
+
+.achievement-card:hover::before{
+
+opacity:1;
+
+}
+
+.achievement-card:hover{
+
+transform:
+
+translateY(-12px);
+
+box-shadow:
+
+0 30px 60px rgba(217,140,179,.18);
+
+}
+
+.achievement-card h3{
+
+font-size:20px;
+
+color:#C35D93;
+
+margin-bottom:12px;
+
+position:relative;
+
+z-index:2;
+
+}
+
+.achievement-card p{
+
+color:#666;
+
+line-height:1.8;
+
+position:relative;
+
+z-index:2;
+
+}
+
+.achievement-icon{
+
+font-size:42px;
+
+margin-bottom:20px;
+
+position:relative;
+
+z-index:2;
+
+animation:pulseGlow 3s infinite;
+
+}
+
+@keyframes pulseGlow{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.1);
+
+}
+
+}
+
+/* ===================================
+          CONTRIBUTIONS
+=================================== */
+
+.contribution-wrapper{
+
+width:90%;
+
+max-width:1200px;
+
+margin:80px auto;
+
+padding:40px;
+
+background:rgba(255,255,255,.58);
+
+backdrop-filter:blur(18px);
+
+border-radius:30px;
+
+border:1px solid rgba(255,255,255,.65);
+
+box-shadow:
+
+0 18px 40px rgba(0,0,0,.06);
+
+transition:.4s;
+
+}
+
+.contribution-wrapper:hover{
+
+transform:translateY(-8px);
+
+box-shadow:
+
+0 28px 55px rgba(217,140,179,.18);
+
+}
+
+.contribution-wrapper img{
+
+width:100%;
+
+border-radius:18px;
+
+}
+
+/* ===================================
+            BUTTONS
+=================================== */
+
+.github-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+margin-top:70px;
+
+}
+
+.github-btn{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:15px 34px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:600;
+
+color:white;
+
+background:
+
+linear-gradient(
+135deg,
+#D98CB3,
+#C5A5FF
+);
+
+transition:.4s;
+
+box-shadow:
+
+0 12px 25px rgba(217,140,179,.25);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.github-btn::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:-100%;
+
+width:100%;
+height:100%;
+
+background:
+
+linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.4),
+transparent
+);
+
+transition:.6s;
+
+}
+
+.github-btn:hover::before{
+
+left:100%;
+
+}
+
+.github-btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:
+
+0 20px 35px rgba(217,140,179,.35);
+
+}
+
+/* ===================================
+            FOOTER
+=================================== */
+
+footer{
+
+margin-top:120px;
+
+padding:35px;
+
+text-align:center;
+
+color:#666;
+
+background:rgba(255,255,255,.55);
+
+backdrop-filter:blur(18px);
+
+border-top:1px solid rgba(255,255,255,.6);
+
+}
+
+/* ===================================
+          ANIMATIONS
+=================================== */
+
+@keyframes slideDown{
+
+from{
+
+opacity:0;
+
+transform:translateY(-40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===================================
+          RESPONSIVE
+=================================== */
+
+@media(max-width:900px){
+
+.github-hero h1{
+
+font-size:48px;
+
+}
+
+.stats-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.achievement-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.navbar{
+
+flex-direction:column;
+
+gap:18px;
+
+padding:20px;
+
+}
+
+.nav-links{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.github-hero{
+
+margin-top:50px;
+
+}
+
+.github-hero h1{
+
+font-size:36px;
+
+}
+
+.github-hero p{
+
+font-size:16px;
+
+line-height:1.8;
+
+}
+
+.github-card{
+
+padding:20px;
+
+}
+
+.contribution-wrapper{
+
+padding:20px;
+
+}
+
+.github-buttons{
+
+flex-direction:column;
+
+}
+
+.github-btn{
+
+width:100%;
+
+}
+
+footer{
+
+padding:25px;
+
+font-size:14px;
+
+}
+
+}

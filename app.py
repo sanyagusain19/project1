@@ -22,6 +22,9 @@ from dynamic.disasters import fetch_disasters
 @app.route("/")
 def home():
     return render_template ("home.html")
+@app.route("/github")
+def github_page():
+   return render_template("github.html")
 
 @app.route("/about")
 def about():
@@ -188,6 +191,9 @@ def churn_project():
 @app.route("/powerbi")
 def powerbi():
     return render_template("powerbi.html")
+@app.route("/music")
+def music_page():
+    return render_template("music.html")
 
 
 if (__name__ == "__main__"):

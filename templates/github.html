@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/github.css') }}">
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+
+<section class="github-hero">
+
+    <span class="badge">
+        Open Source • Flask • Machine Learning
+    </span>
+
+    <h1>My GitHub Journey</h1>
+
+    <p>
+        Every repository reflects a step in my learning journey.
+        From Python fundamentals to Machine Learning applications,
+        recommendation systems, APIs and Flask dashboards,
+        I enjoy solving real-world problems through code.
+    </p>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<h2 class="section-title">
+    What You'll Find
+</h2>
+
+<div class="achievement-grid">
+
+    <div class="achievement-card">
+
+        <div class="achievement-icon">💻</div>
+
+        <h3>Clean Code</h3>
+
+        <p>
+            Organized Python projects with readable,
+            scalable and maintainable code.
+        </p>
+
+    </div>
+
+    <div class="achievement-card">
+
+        <div class="achievement-icon">🚀</div>
+
+        <h3>Real Projects</h3>
+
+        <p>
+            Machine Learning, Flask,
+            APIs and Data Science applications.
+        </p>
+
+    </div>
+
+    <div class="achievement-card">
+
+        <div class="achievement-icon">📈</div>
+
+        <h3>Continuous Learning</h3>
+
+        <p>
+            Every repository represents a new skill
+            and practical implementation.
+        </p>
+
+    </div>
+
+</div>
+
+<!-- ================= CONTRIBUTION GRAPH ================= -->
+
+<h2 class="section-title">
+    GitHub Contributions
+</h2>
+
+<div class="contribution-wrapper">
+
+<img
+src="https://ghchart.rshah.org/sanyagusain19"
+alt="Contribution Graph">
+
+</div>
+
+<!-- ================= ACTIVITY GRAPH ================= -->
+
+<h2 class="section-title">
+    Coding Activity
+</h2>
+
+<div class="contribution-wrapper">
+
+<img
+src="https://github-readme-activity-graph.vercel.app/graph?username=sanyagusain19&theme=tokyo-night&hide_border=true"
+alt="Activity Graph">
+
+</div>
+
+<!-- ================= FEATURED PROJECTS ================= -->
+
+<h2 class="section-title">
+    Featured Repositories
+</h2>
+
+<div class="achievement-grid">
+
+    <div class="achievement-card">
+
+        <div class="achievement-icon">🎵</div>
+
+        <h3>Music Recommendation</h3>
+
+        <p>
+            Mood-based recommendation system using
+            Euclidean Distance and Flask.
+        </p>
+
+    </div>
+
+    <div class="achievement-card">
+
+        <div class="achievement-icon">📚</div>
+
+        <h3>Book Recommendation</h3>
+
+        <p>
+            Recommendation engine using
+            Cosine Similarity and Flask.
+        </p>
+
+    </div>
+
+    <div class="achievement-card">
+
+        <div class="achievement-icon">📺</div>
+
+        <h3>YouTube Dashboard</h3>
+
+        <p>
+            Analytics dashboard powered by the
+            YouTube Data API.
+        </p>
+
+    </div>
+
+    <div class="achievement-card">
+
+        <div class="achievement-icon">📊</div>
+
+        <h3>Customer Churn</h3>
+
+        <p>
+            Machine Learning model using
+            XGBoost and Flask.
+        </p>
+
+    </div>
+
+    <div class="achievement-card">
+
+        <div class="achievement-icon">🐙</div>
+
+        <h3>GitHub Dashboard</h3>
+
+        <p>
+            GitHub REST API project displaying
+            repositories and profile information.
+        </p>
+
+    </div>
+
+    <div class="achievement-card">
+
+        <div class="achievement-icon">🌐</div>
+
+        <h3>Portfolio Website</h3>
+
+        <p>
+            Responsive portfolio built with
+            Flask, HTML, CSS and JavaScript.
+        </p>
+
+    </div>
+
+</div>
+
+<!-- ================= TECH STACK ================= -->
+
+<h2 class="section-title">
+    Technologies
+</h2>
+
+<div class="achievement-grid">
+
+    <div class="achievement-card">
+        <div class="achievement-icon">🐍</div>
+        <h3>Python</h3>
+    </div>
+
+    <div class="achievement-card">
+        <div class="achievement-icon">⚙️</div>
+        <h3>Flask</h3>
+    </div>
+
+    <div class="achievement-card">
+        <div class="achievement-icon">🤖</div>
+        <h3>Machine Learning</h3>
+    </div>
+
+    <div class="achievement-card">
+        <div class="achievement-icon">📊</div>
+        <h3>Pandas</h3>
+    </div>
+
+    <div class="achievement-card">
+        <div class="achievement-icon">🗄️</div>
+        <h3>SQL</h3>
+    </div>
+
+    <div class="achievement-card">
+        <div class="achievement-icon">🎨</div>
+        <h3>HTML • CSS • JavaScript</h3>
+    </div>
+
+</div>
+
+<!-- ================= BUTTONS ================= -->
+
+<div class="github-buttons">
+
+    <a
+    href="https://github.com/sanyagusain19"
+    target="_blank"
+    class="github-btn">
+
+    🐙 GitHub Profile
+
+    </a>
+
+    <a
+    href="https://github.com/sanyagusain19?tab=repositories"
+    target="_blank"
+    class="github-btn">
+
+    📂 View Repositories
+
+    </a>
+
+    <a
+    href="{{ url_for('home') }}"
+    class="github-btn">
+
+    ← Back to Portfolio
+
+    </a>
+
+</div>
+
+<footer>
+
+    <p>
+        Building, learning and sharing one repository at a time.
+    </p>
+
+</footer>
+
+</body>
+</html>

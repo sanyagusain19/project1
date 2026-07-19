@@ -8,7 +8,7 @@
   }
 
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
+    entries.forEach((entry, i) => {
       if (entry.isIntersecting) {
         const el = entry.target;
         const siblings = Array.from(el.parentElement.children).filter(c => c.classList.contains('reveal'));
@@ -20,14 +20,5 @@
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-  // IMPORTANT: wait two animation frames before observing.
-  // This guarantees the browser paints the hidden (.reveal) state
-  // at least once, so elements already in view on page-load
-  // (above the fold) get a real transition instead of snapping
-  // straight to the visible state.
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      items.forEach(el => observer.observe(el));
-    });
-  });
+  items.forEach(el => observer.observe(el));
 })();
