@@ -1,0 +1,69 @@
+/* ===================================
+        CUSTOM CURSOR + TRAIL
+   Fully standalone — just link this CSS
+   file + cursor-trail.js on any page and
+   the trail effect works, no dependency
+   on your theme's other CSS files.
+
+   Colors are hardcoded to match the
+   portfolio's pink/purple theme. Change
+   the hex values below if you ever want
+   a different color on a different page.
+=================================== */
+
+.custom-cursor-active,
+.custom-cursor-active *{
+
+    cursor:none !important;
+
+}
+
+.cursor-dot,
+.cursor-ring,
+.cursor-trail-dot{
+
+    position:fixed;
+    top:0;
+    left:0;
+    border-radius:50%;
+    pointer-events:none;
+    z-index:9999;
+    transform:translate(-50%,-50%);
+    will-change:transform;
+
+}
+
+.cursor-dot{
+
+    width:9px;
+    height:9px;
+    background:#C35D93;
+    z-index:10000;
+
+}
+
+.cursor-ring{
+
+    width:34px;
+    height:34px;
+    border:2px solid #D98CB3;
+    opacity:.55;
+    transition:width .25s ease, height .25s ease, border-color .25s ease, opacity .25s ease;
+
+}
+
+.cursor-ring.cursor-hovering{
+
+    width:56px;
+    height:56px;
+    border-color:#A678E2;
+    opacity:.8;
+
+}
+
+.cursor-trail-dot{
+
+    background:#D98CB3;
+    opacity:.5;
+
+}

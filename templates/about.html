@@ -13,7 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }}">
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cursor-trail.css') }}">
+<script src="{{ url_for('static', filename='js/cursor-trail.js') }}"></script>
 </head>
 
 <body class="page-enter">
@@ -190,13 +191,13 @@
         <div class="project-card">
             <h3>⚡ PokeS – Pokémon Search App</h3>
             <p>A clean search app to explore your favourite Pokémon by name, built using the PokéAPI.</p>
-            <a href="/projects">View Project</a>
+            <a href="/pokemon">View Project</a>
         </div>
 
         <div class="project-card">
             <h3> MyAnimeList Scraper 🕸️</h3>
             <p>A web scraper built with BeautifulSoup that pulls and structures anime data for analysis.</p>
-            <a href="/projects">View Project</a>
+            <a href="/animescraper">View Project</a>
         </div>
 
         <div class="project-card">
@@ -295,6 +296,7 @@
 
     </footer>
 <script src="{{ url_for('static', filename='js/reveal.js') }}"></script>
+
 </body>
 
 </html>
