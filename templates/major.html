@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Major Projects | Sanya</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/major.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Floating Background -->
+
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+<div class="blob blob3"></div>
+
+<!-- ==========================
+        NAVBAR
+========================== -->
+
+<nav class="navbar">
+
+    <div class="logo">
+
+        Sanya<span>.dev</span>
+
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/">Home</a>
+
+        <a href="/projects" class="active">Projects</a>
+
+        <a href="/about">About</a>
+
+    </div>
+
+</nav>
+
+
+<!-- ==========================
+        HERO
+========================== -->
+
+<section class="hero">
+
+    <div class="hero-left">
+
+        <span class="tag">
+
+            🚀 FEATURED AI PROJECT
+
+        </span>
+
+        <h1>
+
+            Network Builder AI
+
+        </h1>
+
+        <h2>
+
+            Connecting Developers Through Intelligence.
+
+        </h2>
+
+        <p>
+
+            A modern developer networking platform that intelligently
+            connects developers based on their skills, interests and
+            learning goals while recommending GitHub repositories
+            and YouTube resources to accelerate learning.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="{{ url_for('networkbuilder') }}" class="primary">
+
+                ✨ Explore Case Study
+
+            </a>
+
+            <a href="https://major-project1-o2v6.onrender.com"
+                target="_blank"
+                class="secondary">
+
+                🌐 Live Demo
+
+            </a>
+
+            <a href="https://github.com/sanyagusain19/major-project1"
+                target="_blank"
+                class="secondary">
+
+                GitHub
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="hero-right">
+
+        <div class="preview-card">
+
+            <img src="{{ url_for('static', filename='img/hero.png') }}"
+                alt="Network Builder">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================
+        PROJECT STATS
+========================== -->
+
+<section class="stats">
+
+    <div class="stat-card">
+
+        <h2>6+</h2>
+
+        <p>Core Features</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2>2</h2>
+
+        <p>External APIs</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2>100%</h2>
+
+        <p>Responsive</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2>AI</h2>
+
+        <p>Recommendation Engine</p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================
+        TECH STACK
+========================== -->
+
+
+
+
+<!-- ==========================
+        FEATURE CARD
+========================== -->
+
+<section class="featured-project">
+
+    <div class="glass-card">
+
+        <div class="left">
+
+            <span class="small-title">
+
+                💜 WHY THIS PROJECT?
+
+            </span>
+
+            <h2>
+
+                More than a project,
+                it became a complete learning experience.
+
+            </h2>
+
+            <p>
+
+                Network Builder AI was created after realizing that
+                students often struggle to find the right people,
+                projects and learning resources.
+
+                Instead of searching endlessly across different
+                platforms, this application intelligently recommends
+                developers, GitHub repositories and YouTube tutorials
+                based on shared interests.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="right">
+
+            <div class="feature">
+
+                🧠 AI Matching
+
+            </div>
+
+            <div class="feature">
+
+                🐙 GitHub Recommendations
+
+            </div>
+
+            <div class="feature">
+
+                ▶️ YouTube Resources
+
+            </div>
+
+            <div class="feature">
+
+                ⚡ Flask Backend
+
+            </div>
+
+            <div class="feature">
+
+                🚀 Deployment
+
+            </div>
+
+            <div class="feature">
+
+                💜 Modern UI
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================
+        ANIME QUOTE
+========================== -->
+
+
+<!-- ==========================
+        PROJECT OVERVIEW
+========================== -->
+
+<section class="overview">
+
+    <div class="section-heading">
+
+        <span class="mini-tag">
+            ✨ PROJECT OVERVIEW
+        </span>
+
+        <h2>
+            Built to help developers learn, connect and grow.
+        </h2>
+
+        <p>
+            Network Builder AI combines intelligent developer matching
+            with personalized GitHub and YouTube recommendations,
+            creating a single platform for collaboration and continuous learning.
+</p>
+</div>
+</section>
+
+
+
+<!-- ==========================
+        FEATURES
+========================== -->
+
+<section class="feature-grid">
+
+    <div class="feature-card">
+
+        <div class="icon">
+            🤝
+        </div>
+
+        <h3>
+            Smart Matching
+        </h3>
+
+        <p>
+            Discover developers with similar
+            interests, technologies and learning goals.
+        </p>
+
+    </div>
+
+
+
+    <div class="feature-card">
+
+        <div class="icon">
+            🐙
+        </div>
+
+        <h3>
+            GitHub Discovery
+        </h3>
+
+        <p>
+            Receive GitHub repository recommendations
+            tailored to your chosen technologies.
+        </p>
+
+    </div>
+
+
+
+    <div class="feature-card">
+
+        <div class="icon">
+            ▶️
+        </div>
+
+        <h3>
+            Learning Hub
+        </h3>
+
+        <p>
+            Explore curated YouTube tutorials
+            and channels to continue learning.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================
+        TECH STACK
+========================== -->
+
+<section class="tech-stack">
+
+    <h2>
+        Built With
+    </h2>
+
+    <div class="tech-list">
+
+        <span>Python</span>
+
+        <span>Flask</span>
+
+        <span>Machine Learning</span>
+
+        <span>Pandas</span>
+
+        <span>Scikit-Learn</span>
+
+        <span>GitHub API</span>
+
+        <span>YouTube API</span>
+
+        <span>HTML5</span>
+
+        <span>CSS3</span>
+
+        <span>Jinja2</span>
+
+        <span>Render</span>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================
+        QUOTE
+========================== -->
+
+<section class="quote">
+
+    <div class="quote-card">
+
+        <h2>
+
+            "Power comes in response to a need, not a desire.
+            You have to create that need."
+
+        </h2>
+
+        <p>
+
+            — Son Goku • Dragon Ball Z
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================
+        NEXT PROJECTS
+========================== -->
+
+
+
+<footer>
+
+    <p>
+
+        Designed & Developed with 💜 by Sanya
+
+    </p>
+
+</footer>

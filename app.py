@@ -191,10 +191,17 @@ def churn_project():
 @app.route("/powerbi")
 def powerbi():
     return render_template("powerbi.html")
-@app.route("/music")
+
+@app.route("/major")
+def major():
+    return render_template("major.html")
+
+@app.route("/networkbuilder")
+def networkbuilder():
+    return render_template("networkbuilder.html")
+@app.route("/music_page")
 def music_page():
     return render_template("music.html")
-
 
 if (__name__ == "__main__"):
     app.run(host = "0.0.0.0", port = 5000, debug = True)  # host, port are optional, change in file server restart ->debug = true

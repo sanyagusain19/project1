@@ -1,0 +1,948 @@
+/* =========================================
+        FLOATING BACKGROUND
+========================================= */
+
+.blob {
+
+    position: fixed;
+
+    border-radius: 50%;
+
+    filter: blur(90px);
+
+    opacity: .45;
+
+    z-index: -1;
+
+    animation: float 10s ease-in-out infinite;
+
+}
+
+.blob1 {
+
+    width: 300px;
+    height: 300px;
+
+    background: #d8b4fe;
+
+    top: -80px;
+    left: -80px;
+
+}
+
+.blob2 {
+
+    width: 260px;
+    height: 260px;
+
+    background: #c4b5fd;
+
+    right: -60px;
+    top: 180px;
+
+    animation-delay: 2s;
+
+}
+
+.blob3 {
+
+    width: 240px;
+    height: 240px;
+
+    background: #f9a8d4;
+
+    bottom: -70px;
+    left: 40%;
+
+    animation-delay: 4s;
+
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-30px);
+
+    }
+
+}
+
+
+
+/* =========================================
+            NAVBAR
+========================================= */
+
+.navbar {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 28px 8%;
+
+    position: sticky;
+
+    top: 0;
+
+    background: rgba(250, 249, 255, .7);
+
+    backdrop-filter: blur(18px);
+
+    z-index: 100;
+
+}
+
+.logo {
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+}
+.project-card{
+
+background:rgba(255,250,253,.85);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,220,240,.6);
+
+box-shadow:
+0 20px 50px rgba(216,180,254,.18);
+
+}
+
+.logo span {
+
+    color: #8b5cf6;
+
+}
+
+.nav-links {
+
+    display: flex;
+
+    gap: 35px;
+
+}
+
+.nav-links a {
+
+    text-decoration: none;
+
+    color: #555;
+
+    font-weight: 500;
+
+    transition: .3s;
+
+}
+
+.nav-links a:hover {
+
+    color: #8b5cf6;
+
+}
+
+
+
+/* =========================================
+            HERO
+========================================= */
+
+.hero {
+
+    padding: 90px 8%;
+
+    display: grid;
+
+    grid-template-columns: 1.1fr .9fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+    min-height: 85vh;
+
+}
+
+.tag {
+
+    display: inline-block;
+
+    padding: 12px 24px;
+
+    background: #ede9fe;
+
+    border-radius: 40px;
+
+    color: #7c3aed;
+
+    font-weight: 600;
+
+    margin-bottom: 25px;
+
+}
+
+.hero h1 {
+
+    font-size: 70px;
+
+    line-height: 1.1;
+
+    margin-bottom: 15px;
+
+}
+
+.hero h2 {
+
+    font-size: 30px;
+
+    font-weight: 500;
+
+    color: #6d28d9;
+
+    margin-bottom: 25px;
+
+}
+
+.hero p {
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    color: #6b7280;
+
+    max-width: 650px;
+
+}
+
+
+
+/* =========================================
+            BUTTONS
+========================================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 18px;
+
+    margin-top: 40px;
+
+    flex-wrap: wrap;
+
+}
+
+.hero-buttons a {
+
+    padding: 15px 32px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: .35s;
+
+}
+
+.primary {
+
+    background: linear-gradient(135deg, #8b5cf6, #a855f7);
+
+    color: white;
+
+    box-shadow: 0 18px 40px rgba(139, 92, 246, .25);
+
+}
+
+.primary:hover {
+
+    transform: translateY(-6px);
+
+}
+
+.secondary {
+
+    background: white;
+
+    color: #7c3aed;
+
+    border: 1px solid #ddd6fe;
+
+}
+
+.secondary:hover {
+
+    background: #f5f3ff;
+
+    transform: translateY(-6px);
+
+}
+
+
+
+/* =========================================
+        HERO IMAGE
+========================================= */
+
+.preview-card {
+
+    background: white;
+
+    padding: 18px;
+
+    border-radius: 35px;
+
+    box-shadow:
+
+        0 35px 80px rgba(124, 58, 237, .18);
+
+    animation: floatImage 5s ease-in-out infinite;
+
+}
+
+.preview-card img {
+
+    width: 100%;
+
+    display: block;
+
+    border-radius: 20px;
+
+}
+
+@keyframes floatImage {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-12px);
+
+    }
+
+}
+
+
+
+/* =========================================
+            STATS
+========================================= */
+
+.stats {
+
+    padding: 30px 8% 80px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+}
+
+.stat-card {
+
+    background: white;
+
+    padding: 35px;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    box-shadow: 0 20px 50px rgba(124, 58, 237, .1);
+
+    transition: .35s;
+
+}
+
+.stat-card:hover {
+
+    transform: translateY(-10px);
+
+}
+
+.stat-card h2 {
+
+    font-size: 40px;
+
+    color: #8b5cf6;
+
+    margin-bottom: 10px;
+
+}
+
+.stat-card p {
+
+    color: #6b7280;
+
+}
+
+
+
+/* =========================================
+        FEATURE GLASS CARD
+========================================= */
+
+.featured-project {
+
+    padding: 90px 8%;
+
+}
+
+.glass-card {
+
+    display: grid;
+
+    grid-template-columns: 1.2fr .8fr;
+
+    gap: 50px;
+
+    background: rgba(255, 255, 255, .72);
+
+    backdrop-filter: blur(18px);
+
+    padding: 60px;
+
+    border-radius: 35px;
+
+    border: 1px solid rgba(255, 255, 255, .45);
+
+    box-shadow: 0 25px 70px rgba(124, 58, 237, .12);
+
+}
+
+.small-title {
+
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    background: #ede9fe;
+
+    border-radius: 30px;
+
+    color: #7c3aed;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 18px;
+
+}
+
+.glass-card h2 {
+
+    font-size: 42px;
+
+    margin-bottom: 25px;
+
+}
+
+.glass-card p {
+
+    line-height: 1.9;
+
+    color: #6b7280;
+
+}
+
+.right {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+
+}
+
+.feature {
+
+    background: white;
+
+    padding: 18px 22px;
+
+    border-radius: 20px;
+
+    font-weight: 600;
+
+    color: #7c3aed;
+
+    box-shadow: 0 10px 30px rgba(124, 58, 237, .08);
+
+    transition: .3s;
+
+}
+
+.feature:hover {
+
+    transform: translateX(10px);
+
+}
+
+/* ==========================
+        OVERVIEW
+========================== */
+
+.overview {
+
+    padding: 90px 8%;
+    text-align: center;
+
+}
+
+.section-heading {
+
+    max-width: 850px;
+    margin: auto;
+
+}
+
+.mini-tag {
+
+    display: inline-block;
+    padding: 10px 22px;
+
+    background: #ede9fe;
+
+    color: #7c3aed;
+
+    border-radius: 40px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 25px;
+
+}
+
+.section-heading h2 {
+
+    font-size: 48px;
+
+    margin-bottom: 20px;
+
+    color: #1f2937;
+
+}
+
+.section-heading p {
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: #6b7280;
+
+}
+
+
+
+/* ==========================
+      PREVIEW IMAGE
+========================== */
+
+.project-preview {
+
+    margin-top: 60px;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+.project-preview img {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    border-radius: 30px;
+
+    box-shadow:
+
+        0 35px 90px rgba(124, 58, 237, .18);
+
+    border: 8px solid white;
+
+    transition: .45s;
+
+}
+
+.project-preview img:hover {
+
+    transform: translateY(-10px) scale(1.02);
+
+}
+
+
+
+/* ==========================
+      STATUS PILLS
+========================== */
+
+.project-status {
+
+    margin-top: 40px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+
+}
+
+.project-status span {
+
+    padding: 12px 24px;
+
+    background: white;
+
+    border-radius: 35px;
+
+    border: 1px solid #ede9fe;
+
+    box-shadow:
+
+        0 10px 25px rgba(124, 58, 237, .08);
+
+    font-weight: 600;
+
+    color: #7c3aed;
+
+    transition: .3s;
+
+}
+
+.project-status span:hover {
+
+    transform: translateY(-5px);
+
+    background: #8b5cf6;
+
+    color: white;
+
+}
+
+
+
+/* ==========================
+      FEATURE GRID
+========================== */
+
+.feature-grid {
+
+    padding: 90px 8%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 35px;
+
+}
+
+.feature-card {
+
+    background: rgba(255, 255, 255, .85);
+
+    backdrop-filter: blur(20px);
+
+    padding: 40px;
+
+    border-radius: 28px;
+
+    border: 1px solid rgba(139, 92, 246, .12);
+
+    box-shadow:
+
+        0 20px 45px rgba(124, 58, 237, .10);
+
+    transition: .4s;
+
+    text-align: center;
+
+}
+
+.feature-card:hover {
+
+    transform: translateY(-12px);
+
+}
+
+.feature-card .icon {
+
+    font-size: 55px;
+
+    margin-bottom: 25px;
+
+}
+
+.feature-card h3 {
+
+    font-size: 26px;
+
+    margin-bottom: 15px;
+
+}
+
+.feature-card p {
+
+    color: #6b7280;
+
+    line-height: 1.8;
+
+}
+
+
+
+/* ==========================
+      TECH STACK
+========================== */
+
+.tech-stack {
+
+    padding: 90px 8%;
+
+    text-align: center;
+
+}
+
+.tech-stack h2 {
+
+    font-size: 45px;
+
+    margin-bottom: 45px;
+
+}
+
+.tech-list {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+
+}
+
+.tech-list span {
+
+    padding: 14px 28px;
+
+    background: #ede9fe;
+
+    border-radius: 40px;
+
+    font-weight: 600;
+
+    color: #7c3aed;
+
+    transition: .35s;
+
+}
+
+.tech-list span:hover {
+
+    background: #8b5cf6;
+
+    color: white;
+
+    transform: translateY(-4px);
+
+}
+
+
+
+/* ==========================
+      QUOTE
+========================== */
+
+.quote {
+
+    padding: 110px 8%;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+.quote-card {
+
+    max-width: 900px;
+
+    background: white;
+
+    padding: 60px;
+
+    border-radius: 35px;
+
+    text-align: center;
+
+    box-shadow:
+
+        0 25px 70px rgba(124, 58, 237, .12);
+
+}
+
+.quote-card h2 {
+
+    font-size: 36px;
+
+    line-height: 1.6;
+
+    font-weight: 600;
+
+}
+
+.quote-card p {
+
+    margin-top: 25px;
+
+    color: #8b5cf6;
+
+    font-size: 18px;
+
+}
+
+/* ==========================
+      FUTURE PROJECTS
+========================== */
+
+.coming-soon {
+
+    padding: 100px 8%;
+
+    text-align: center;
+
+}
+
+.future-grid {
+
+    margin-top: 60px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+}
+
+.future-card {
+
+    background: white;
+
+    padding: 45px 30px;
+
+    border-radius: 30px;
+
+    box-shadow: 0 20px 50px rgba(124, 58, 237, .1);
+
+    transition: .35s;
+
+}
+
+.future-card:hover {
+
+    transform: translateY(-12px);
+
+}
+
+.future-card .emoji {
+
+    font-size: 55px;
+
+    margin-bottom: 25px;
+
+}
+
+.future-card h3 {
+
+    font-size: 26px;
+
+    margin-bottom: 18px;
+
+}
+
+.future-card p {
+
+    line-height: 1.8;
+
+    color: #6b7280;
+
+}
+
+
+
+/* ==========================
+          FOOTER
+========================== */
+
+footer {
+
+    padding: 70px 8%;
+
+    text-align: center;
+
+    background: #f5f3ff;
+
+    margin-top: 80px;
+
+}
+
+footer h3 {
+
+    font-size: 30px;
+
+    max-width: 800px;
+
+    margin: auto;
+
+    line-height: 1.6;
+
+    color: #4c1d95;
+
+}
+
+footer p {
+
+    margin-top: 30px;
+
+    color: #7c3aed;
+
+    font-weight: 600;
+
+}
