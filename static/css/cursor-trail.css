@@ -66,4 +66,29 @@
     background:#D98CB3;
     opacity:.5;
 
+    /* ==========================
+   Cursor Fix
+========================== */
+
+.cursor-dot,
+.cursor-ring,
+.cursor-trail-dot{
+    position: fixed;
+    pointer-events: none;
+    z-index: 999999 !important;
+}
+
+.project-card::before,
+.project-card::after{
+    pointer-events: none;
+}
+
+.project-card{
+    position: relative;
+}
+
+.explore-btn{
+    position: relative;
+    z-index: 2;
+}
 }

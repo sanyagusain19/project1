@@ -45,13 +45,14 @@
     let dotX = mouseX, dotY = mouseY;
     let ringX = mouseX, ringY = mouseY;
 
-    window.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-    });
+   document.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
 
     // hover state on anything clickable
-    const hoverTargets = 'a, button, .theme-toggle, .skills span, .contact-btn, input, textarea, [role="button"]';
+const hoverTargets =
+'a, button, .project-card, .explore-btn, .theme-toggle, .skills span, .contact-btn, input, textarea, [role="button"]';
     document.addEventListener('mouseover', (e) => {
       if (e.target.closest(hoverTargets)) ring.classList.add('cursor-hovering');
     });
