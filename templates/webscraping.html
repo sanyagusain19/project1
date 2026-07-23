@@ -1,231 +1,260 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
-
 
 <head>
 
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Web Scraping Hub</title>
+    <title>Web Scraping Hub | Portfolio</title>
 
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/webscraping.css') }}">
 
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/cursor-trail.css') }}">
 
-    <!-- your specific CSS file -->
+    <!-- <script src="{{ url_for('static', filename='js/cursor-trail.js') }}"></script> -->
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/webscraping.css') }}">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/cursor-trail.css') }}">
-<script src="{{ url_for('static', filename='js/cursor-trail.js') }}"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
 </head>
-
-
 
 <body class="page-enter">
 
+    <!-- ==========================
+            NAVBAR
+    =========================== -->
 
+    <nav class="navbar">
 
-    <!-- NAVBAR -->
-
-    <div class="navbar">
-
-        <div class="logo">🕸️ Web Scraping Hub</div>
-
-
+        <div class="logo">
+            🕸️ Web Scraping Hub
+        </div>
 
         <div class="nav-links">
-
-            <a href="/projects">Projects</a>
-
-            <a href="/webscraping" class="active">Web Scraping</a>
-
-           
+    <a href="/">Home</a>
+    <a href="/projects">Projects</a>
+    <a href="/webscraping" class="active">Web Scraping</a>
 
         </div>
 
-    </div>
+    </nav>
 
-
-
-
-
-    <!-- HERO SECTION -->
+    <!-- ==========================
+            HERO
+    =========================== -->
 
     <section class="hero">
 
-    <div class="tag"> WEB SCRAPING</div>
+        <div class="hero-text">
 
+            <span class="tag">
 
+                WEB SCRAPING
 
-    <h1>Web Scraping Projects Showcase</h1>
+            </span>
 
+            <h1>
 
+                Web Scraping Projects Showcase
 
-    <p>
+            </h1>
 
-        This section of my portfolio highlights my hands-on experience in web scraping.
+            <p>
 
-        I have worked with static websites, dynamic JavaScript-rendered pages, and API-based data extraction
+                This section of my portfolio highlights my hands-on
+                experience in web scraping. I have worked with static
+                websites, dynamic JavaScript-rendered pages, and API-based
+                data extraction to understand real-world data collection
+                techniques.
 
-        to understand real-world data collection techniques.
+            </p>
 
-    </p>
+        </div>
 
-</section>
+    </section>
 
-
-
-
-
-    <!-- 3 MAIN OPTIONS -->
+    <!-- ==========================
+          SCRAPING CATEGORIES
+    =========================== -->
 
     <section class="categories">
 
+        <!-- STATIC -->
 
+        <div class="project-card">
 
-    <!-- STATIC -->
+            <div class="emoji">
+                ⭐
+            </div>
 
-    <div class="project-card">
+            <h2>
+                Static Scraping
+            </h2>
 
+            <p>
 
+                Built using BeautifulSoup and Requests to extract structured
+                data from static HTML pages. Focused on DOM parsing and
+                clean data extraction techniques.
 
-        <div class="emoji">⭐</div>
+            </p>
 
+            <div class="skills">
 
+                <span>Python</span>
+                <span>BeautifulSoup</span>
+                <span>Requests</span>
 
-        <h2>Static Scraping</h2>
+            </div>
 
+            <div class="count">
 
+                Projects Included
 
-        <p>
+            </div>
 
-            Built using BeautifulSoup and Requests to extract structured data from static HTML pages.
+            <a href="{{ url_for('staticscraping') }}"
+               class="explore-btn">
 
-            Focused on DOM parsing and clean data extraction techniques.
-
-        </p>
-
-
-
-       
-
-            <a href="{{ url_for('staticscraping') }}" class="explore-btn">
-
-                Explore
+                Explore →
 
             </a>
 
-    </div>
+        </div>
 
+        <!-- DYNAMIC -->
 
+        <div class="project-card">
 
+            <div class="emoji">
+                ⚡
+            </div>
 
+            <h2>
 
-    <!-- DYNAMIC -->
+                Dynamic Scraping
 
-    <div class="project-card">
+            </h2>
 
+            <p>
 
+                Worked with Selenium-based automation to scrape
+                JavaScript-rendered websites. Learned handling delays,
+                waiting for elements, browser automation and dynamic
+                content extraction.
 
-        <div class="emoji">⚡</div>
+            </p>
 
+            <div class="skills">
 
+                <span>Python</span>
+                <span>Selenium</span>
+                <span>WebDriver</span>
 
-        <h2>Dynamic Scraping</h2>
+            </div>
 
+            <div class="count">
 
+                JavaScript Websites
 
-        <p>
+            </div>
 
-            Worked with Selenium-based automation to scrape JavaScript-rendered websites.
+            <a href="/dynamic"
+               class="explore-btn">
 
-            Learned handling delays, elements loading, and browser automation.
+                Explore →
 
-        </p>
+            </a>
 
+        </div>
 
+        <!-- API -->
 
-        <a href="/dynamic" class="explore-btn">
+        <div class="project-card">
 
-            Explore
+            <div class="emoji">
+                🌐
+            </div>
 
-        </a>
+            <h2>
 
-    </div>
+                API Scraping
 
+            </h2>
 
+            <p>
 
+                Extracted structured JSON data directly from APIs for
+                fast and efficient data collection. Focused on real-time
+                data access, parsing responses and integrating APIs into
+                Python applications.
 
+            </p>
 
-    <!-- API -->
+            <div class="skills">
 
-    <div class="project-card">
+                <span>Python</span>
+                <span>REST API</span>
+                <span>JSON</span>
 
+            </div>
 
+            <div class="count">
 
-        <div class="emoji">🌐</div>
+                Real-Time Data
 
+            </div>
 
+            <a href="{{ url_for('apis') }}"
+               class="explore-btn">
 
-        <h2>API Scraping</h2>
+                Explore →
 
+            </a>
 
+        </div>
 
-        <p>
+    </section>
 
-            Extracted structured JSON data directly from APIs for fast and efficient data collection.
+    <!-- ==========================
+            QUOTE
+    =========================== -->
 
-            Focused on real-time data access and response handling.
+    <section class="quote">
 
-        </p>
+        <div class="quote-card">
 
-        <a href="{{ url_for('apis') }}" class="explore-btn">
+            <div class="quote-mark">
+                ❝
+            </div>
 
-            Explore
+            <h2>
 
-        </a>
+                Turning raw web data into structured insights —
+                one scraper at a time.
 
-    </div>
+            </h2>
 
+            <div class="quote-mark bottom">
+                ❞
+            </div>
 
+        </div>
 
-</section>
+    </section>
 
+    <!-- ==========================
+            FOOTER
+    =========================== -->
 
+    <footer>
 
-<section class="quote">
+        Made with ❤️ by SANIYA
 
-
-
-    <div class="quote-card">
-
-
-
-        <div class="quote-mark">❝</div>
-
-
-
-        <h2>
-
-            Turning raw web data into structured insights — one scraper at a time.
-
-        </h2>
-
-
-
-        <div class="quote-mark bottom">❞</div>
-
-
-
-    </div>
-
-
-
-</section>
-
-
-
-
+    </footer>
 
 </body>
 

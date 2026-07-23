@@ -1,383 +1,887 @@
 /* ===================================
         GOOGLE FONT
 =================================== */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* ===================================
-        BASE RESET
-=================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    min-height: 100vh;
-    overflow-x: hidden;
-    color: #444;
-    
-    /* 
-      LAG FIX #1: Baked the mauve/purple color blobs right into the native background 
-      gradient chain. This gives you the exact same vibrant ambient look but with 
-      ABSOLUTELY ZERO runtime rendering cost.
-    */
+body{
+
+    min-height:100vh;
+    overflow-x:hidden;
+    color:#444;
+
     background:
-    radial-gradient(circle at 10% 10%, #E4C1F9 0%, transparent 45%),
-    radial-gradient(circle at 90% 90%, #D3B7FF 0%, transparent 45%),
     linear-gradient(
         135deg,
-        #FAF6FA,
-        #EFE3EC,
-        #D8C0D3
+        #FFFDFB 0%,
+        #FFEFF7 45%,
+        #F9F1FF 100%
     );
-    background-attachment: fixed;
+
 }
 
 /* ===================================
-        FLOATING BLOBS (LAG FIX #2)
+        FLOATING BLOBS
 =================================== */
-/* 
-   We removed the heavy body::before and body::after selectors because 
-   rendering 400px animating elements with filter: blur(120px) on fixed positioning 
-   causes immediate frame drops during scrolls. The background gradients above replace them cleanly.
-*/
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:420px;
+height:420px;
+
+background:#FFD8EA;
+
+border-radius:50%;
+
+top:-150px;
+left:-130px;
+
+filter:blur(120px);
+
+opacity:.5;
+
+z-index:-2;
+
+animation:blobOne 12s ease-in-out infinite;
+
+}
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+width:400px;
+height:400px;
+
+background:#EAD9FF;
+
+border-radius:50%;
+
+bottom:-150px;
+right:-120px;
+
+filter:blur(120px);
+
+opacity:.5;
+
+z-index:-2;
+
+animation:blobTwo 14s ease-in-out infinite;
+
+}
+
+@keyframes blobOne{
+
+0%,100%{
+
+transform:translate(0,0);
+
+}
+
+50%{
+
+transform:translate(40px,40px);
+
+}
+
+}
+
+@keyframes blobTwo{
+
+0%,100%{
+
+transform:translate(0,0);
+
+}
+
+50%{
+
+transform:translate(-35px,-25px);
+
+}
+
+}
 
 /* ===================================
             NAVBAR
 =================================== */
-.navbar {
-    width: 90%;
-    max-width: 1200px;
-    margin: 25px auto;
-    padding: 18px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    /* 
-       LAG FIX #3: Removed backdrop-filter. Swapped to a higher-opacity solid 
-       rgba glass finish. It keeps the slick aesthetic but takes away 100% of the render lag.
-    */
-    background: rgba(255, 255, 255, 0.85);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    box-shadow: 0 12px 35px rgba(138, 92, 142, 0.05);
-    
-    will-change: transform, opacity;
-    animation: pageIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+.navbar{
+
+width:90%;
+
+max-width:1200px;
+
+margin:25px auto;
+
+padding:18px 30px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(255,255,255,.55);
+
+backdrop-filter:blur(18px);
+
+border-radius:20px;
+
+box-shadow:0 12px 35px rgba(0,0,0,.06);
+
+animation:slideDown .8s ease;
+
 }
 
-.logo {
-    font-size: 26px;
-    font-weight: 700;
-    color: #5C445B;
+.logo{
+
+font-size:28px;
+
+font-weight:700;
+
+color:#5C445B;
+
 }
 
-.nav-links {
-    display: flex;
-    gap: 18px;
+.nav-links{
+
+display:flex;
+
+gap:18px;
+
 }
 
-.nav-links a {
-    text-decoration: none;
-    padding: 12px 26px;
-    border-radius: 40px;
-    background: rgba(255, 255, 255, 0.9);
-    color: #5C445B;
-    font-weight: 600;
-    /* Only transition properties that do not trigger layout recalculations */
-    transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.25s, color 0.25s;
+.nav-links a{
+
+text-decoration:none;
+
+padding:12px 28px;
+
+border-radius:40px;
+
+background:white;
+
+color:#555;
+
+font-weight:600;
+
+transition:.35s;
+
 }
 
-.nav-links a:hover {
-    background: #A3709B;
-    color: white;
-    transform: translateY(-2px);
+.nav-links a:hover{
+
+background:#D98CB3;
+
+color:white;
+
+transform:translateY(-3px);
+
 }
 
-.active {
-    background: #8A5380 !important;
-    color: white !important;
-}
+.active{
 
-/* ===================================
-            HERO SECTION
-=================================== */
-.hero {
-    width: 90%;
-    max-width: 900px;
-    margin: 80px auto 50px;
-    text-align: center;
-    will-change: transform, opacity;
-    animation: pageIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
+background:#D98CB3 !important;
 
-.tag {
-    display: inline-block;
-    padding: 10px 24px;
-    border-radius: 40px;
-    background: #F5EAFF;
-    color: #925AA6;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-bottom: 22px;
-    box-shadow: 0 8px 20px rgba(146, 90, 166, .1);
-}
+color:white !important;
 
-.hero h1 {
-    font-size: 54px;
-    color: #3D2F39;
-    margin-bottom: 22px;
-    line-height: 1.2;
-}
-
-.hero p {
-    max-width: 720px;
-    margin: auto;
-    color: #61555E;
-    font-size: 18px;
-    line-height: 1.8;
 }
 
 /* ===================================
-        CATEGORY / CARDS SECTION
+            HERO
 =================================== */
-.categories {
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto 100px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+
+.hero{
+
+width:90%;
+
+max-width:900px;
+
+margin:80px auto 70px;
+
+text-align:center;
+
+animation:fadeDown 1s ease;
+
 }
 
-/* CARD STYLE */
-.project-card {
-    /* LAG FIX #4: Clean, high-performance card backgrounds without backdrop blurs */
-    background: rgba(255, 255, 255, 0.80);
-    border-radius: 30px;
-    padding: 45px 30px;
-    text-align: center;
-    box-shadow: 0 15px 40px rgba(92, 68, 91, .05);
-    border: 1px solid rgba(255, 255, 255, .8);
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s;
+.tag{
+
+display:inline-block;
+
+padding:10px 24px;
+
+border-radius:40px;
+
+background:#FFE8F3;
+
+color:#C35D93;
+
+font-weight:600;
+
+letter-spacing:1px;
+
+margin-bottom:22px;
+
+box-shadow:0 8px 20px rgba(217,140,179,.18);
+
 }
 
-/* Soft glow hover effect */
-.project-card::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: radial-gradient(circle at top, #CD9BCA, transparent 70%);
-    opacity: 0;
-    transition: opacity .3s ease;
+.hero h1{
+
+font-size:58px;
+
+color:#3D2F39;
+
+margin-bottom:25px;
+
+line-height:1.2;
+
 }
 
-.project-card:hover::before {
-    opacity: .2;
-}
+.hero p{
 
-.project-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 25px 50px rgba(163, 112, 155, 0.15);
-}
+max-width:760px;
 
-/* emoji */
-.emoji {
-    font-size: 60px;
-    margin-bottom: 20px;
-    display: inline-block;
-    transition: transform .3s cubic-bezier(0.175, 0.885, 0.32, 1.15);
-}
+margin:auto;
 
-.project-card:hover .emoji {
-    transform: scale(1.15) rotate(5deg);
-}
+color:#666;
 
-/* title */
-.project-card h2 {
-    font-size: 28px;
-    color: #925AA6;
-    margin-bottom: 15px;
-}
+font-size:18px;
 
-/* description */
-.project-card p {
-    color: #5C515A;
-    line-height: 1.7;
-    margin-bottom: 28px;
-    font-size: 15.5px;
+line-height:1.9;
+
 }
 
 /* ===================================
-         PAGE ENTER ANIMATIONS
+        CATEGORY SECTION
 =================================== */
-.page-enter {
-    opacity: 0;
-    transform: translateY(15px);
-    animation: pageIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+.categories{
+
+width:90%;
+
+max-width:1200px;
+
+margin:0 auto 100px;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:35px;
+
 }
 
-@keyframes pageIn {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
+.project-card{
+
+background:rgba(255,255,255,.60);
+
+backdrop-filter:blur(20px);
+
+border-radius:30px;
+
+padding:45px;
+
+text-align:center;
+
+box-shadow:0 18px 45px rgba(0,0,0,.08);
+
+transition:.45s;
+
+border:1px solid rgba(255,255,255,.7);
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+.project-card:nth-child(1){
+
+animation:fadeLeft 1.2s ease;
+
+}
+
+.project-card:nth-child(2){
+
+animation:fadeUp 1.4s ease;
+
+}
+
+.project-card:nth-child(3){
+
+animation:fadeRight 1.6s ease;
+
+}
+
+.project-card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:
+0 25px 60px rgba(217,140,179,.20),
+0 0 35px rgba(195,93,147,.12);
+
+}
+
+.emoji{
+
+font-size:70px;
+
+margin-bottom:25px;
+
+transition:.4s;
+
+}
+
+.project-card:hover .emoji{
+
+transform:scale(1.15) rotate(5deg);
+
+}
+
+.project-card h2{
+
+font-size:30px;
+
+color:#C35D93;
+
+margin-bottom:18px;
+
+}
+
+.project-card p{
+
+color:#666;
+
+line-height:1.8;
+
+font-size:16px;
+
+margin-bottom:28px;
+
+}
+
+/* ===================================
+        SKILL BADGES
+=================================== */
+
+.skills{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:10px;
+
+margin-bottom:30px;
+
+}
+
+.skills span{
+
+padding:8px 18px;
+
+border-radius:40px;
+
+background:#FFF0F6;
+
+color:#C35D93;
+
+font-size:13px;
+
+font-weight:600;
+
+box-shadow:0 6px 16px rgba(217,140,179,.12);
+
+transition:.3s;
+
+}
+
+.skills span:hover{
+
+background:#D98CB3;
+
+color:white;
+
+transform:translateY(-3px);
+
+}
+
+/* ===================================
+        COUNT BADGE
+=================================== */
+
+.count{
+
+display:inline-block;
+
+margin-bottom:30px;
+
+padding:12px 28px;
+
+border-radius:40px;
+
+background:#FFF0F6;
+
+color:#C35D93;
+
+font-weight:600;
+
+}
+
+/* ===================================
+        BUTTON
+=================================== */
+
+.explore-btn{
+
+display:inline-block;
+
+margin-top:auto;
+
+text-decoration:none;
+
+padding:15px 38px;
+
+border-radius:50px;
+
+background:#D98CB3;
+
+color:white;
+
+font-weight:600;
+
+transition:.35s;
+
+}
+
+.explore-btn:hover{
+
+transform:translateY(-4px);
+
+background:#C35D93;
+
+box-shadow:0 15px 35px rgba(217,140,179,.35);
+
+}
+/* ===================================
+        QUOTE SECTION
+=================================== */
+
+.quote{
+
+    width:90%;
+    max-width:900px;
+    margin:100px auto;
+    text-align:center;
+
+    animation:fadeUp 1.8s ease;
+
+}
+
+.quote-card{
+
+    position:relative;
+
+    background:rgba(255,255,255,.60);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:35px;
+
+    padding:60px 45px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+
+    border:1px solid rgba(255,255,255,.7);
+
+    transition:.45s;
+
+}
+
+.quote-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 30px 65px rgba(217,140,179,.20);
+
+}
+
+.quote-mark{
+
+    position:absolute;
+
+    top:15px;
+    left:22px;
+
+    font-size:60px;
+
+    color:#D98CB3;
+
+    opacity:.35;
+
+}
+
+.quote-mark.bottom{
+
+    top:auto;
+    left:auto;
+
+    right:22px;
+    bottom:12px;
+
+}
+
+.quote-card h2{
+
+    color:#4A3A46;
+
+    font-size:28px;
+
+    font-style:italic;
+
+    line-height:1.8;
+
+    font-weight:500;
+
+}
+
+/* ===================================
+        FOOTER
+=================================== */
+
+footer{
+
+    margin-top:80px;
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    color:#6B5B66;
+
+    font-size:15px;
+
+    background:rgba(255,255,255,.45);
+
+    backdrop-filter:blur(18px);
+
+    border-top:1px solid rgba(255,255,255,.5);
+
+}
+
+/* ===================================
+        PAGE ANIMATION
+=================================== */
+
+.page-enter{
+
+    opacity:0;
+
+    transform:translateY(20px);
+
+    animation:pageIn .7s ease forwards;
+
+}
+
+@keyframes pageIn{
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
-/* BUTTON */
-/* BUTTON (FIXED CLICK LAYER) */
-/* 1. UPDATE THE CARD HOVER STYLES */
-.project-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 25px 50px rgba(163, 112, 155, 0.15);
-    /* FORCE child elements to preserve their layers during structural shifts */
-    /* transform-style: preserve-3d;  */
-}
-
-/* 2. UPDATE THE EXPLORE BUTTON STYLES */
-.explore-btn {
-    display: inline-block;
-    text-decoration: none;
-    padding: 14px 34px;
-    border-radius: 50px;
-    background: #A3709B;
-    color: white;
-    font-weight: 600;
-    
-    /* THE FIX: Absolute structural isolation */
-    position: relative;
-    z-index: 999; 
-    /* transform: translateZ(20px); Pushes the button physically forward away from the card background */
-    
-    cursor: pointer;
-    transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.25s, box-shadow 0.25s;
-}
-
-.explore-btn:hover {
-    /* Keeps the 3D forward position intact when you try to hover directly over it */
-    transform: translateY(-2px) translateZ(30px); 
-    background: #8A5380;
-    box-shadow: 0 10px 25px rgba(138, 83, 128, .25);
-}
-
-.project-card::after {
-    content: "";
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%) scale(.7);
-    background: radial-gradient(circle, rgba(228, 193, 249, 0.4), transparent 70%);
-    border-radius: 50%;
-    opacity: 0;
-    z-index: 0;
-    transition: transform .4s ease, opacity .4s ease;
-}
-
-.project-card:hover::after {
-    opacity: 1;
-    transform: translate(-50%,-50%) scale(1);
-}
-
-.back-btn a {
-    text-decoration: none;
-    padding: 10px 18px;
-    border-radius: 30px;
-    background: rgba(255, 255, 255, .85);
-    color: #925AA6;
-    font-weight: 600;
-    transition: transform .25s, background-color .25s, color .25s;
-    display: inline-block;
-}
-
-.back-btn a:hover {
-    background: #A3709B;
-    color: white;
-    transform: translateY(-2px);
 }
 
 /* ===================================
-        QUOTE CARD
+        OTHER ANIMATIONS
 =================================== */
-.quote {
-    width: 90%;
-    max-width: 900px;
-    margin: 120px auto;
-    text-align: center;
+
+@keyframes slideDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
 }
 
-.quote-card {
-    position: relative;
-    padding: 60px 40px;
-    border-radius: 30px;
-    background: rgba(255, 255, 255, 0.80);
-    border: 1px solid rgba(255, 255, 255, .8);
-    box-shadow: 0 20px 60px rgba(146, 90, 166, 0.03);
-    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s;
-    overflow: hidden;
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
 }
 
-.quote-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 25px 60px rgba(163, 112, 155, .12);
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
 }
 
-.quote-mark {
-    font-size: 70px;
-    color: #A3709B;
-    opacity: .15;
-    position: absolute;
+@keyframes fadeLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
 }
 
-.quote-mark {
-    top: 10px;
-    left: 20px;
-}
+@keyframes fadeRight{
 
-.quote-mark.bottom {
-    top: auto;
-    left: auto;
-    right: 20px;
-    bottom: 10px;
-}
+    from{
 
-.quote-card h2 {
-    font-size: 26px;
-    font-weight: 500;
-    color: #4A3A46;
-    line-height: 1.8;
-    font-style: italic;
-    position: relative;
-    z-index: 2;
+        opacity:0;
+
+        transform:translateX(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
 }
 
 /* ===================================
-        RESPONSIVE MEDIA QUERIES
+        RESPONSIVE
 =================================== */
-@media (max-width: 900px) {
-    .categories {
-        grid-template-columns: 1fr;
-        gap: 20px;
+
+@media (max-width:992px){
+
+    .hero h1{
+
+        font-size:46px;
+
     }
-    .hero h1 {
-        font-size: 38px;
+
+    .hero p{
+
+        font-size:17px;
+
     }
+
+    .categories{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:18px;
+
+        padding:20px;
+
+    }
+
+    .nav-links{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .hero{
+
+        margin-top:60px;
+
+    }
+
+    .hero h1{
+
+        font-size:38px;
+
+    }
+
+    .hero p{
+
+        font-size:16px;
+
+        line-height:1.8;
+
+    }
+
+    .project-card{
+
+        padding:35px;
+
+    }
+
+    .emoji{
+
+        font-size:58px;
+
+    }
+
+    .project-card h2{
+
+        font-size:26px;
+
+    }
+
+    .quote-card{
+
+        padding:45px 30px;
+
+    }
+
+    .quote-card h2{
+
+        font-size:22px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .logo{
+
+        font-size:22px;
+
+    }
+
+    .nav-links a{
+
+        padding:10px 18px;
+
+        font-size:14px;
+
+    }
+
+    .hero h1{
+
+        font-size:30px;
+
+    }
+
+    .tag{
+
+        font-size:13px;
+
+        padding:8px 18px;
+
+    }
+
+    .project-card{
+
+        padding:28px;
+
+    }
+
+    .skills{
+
+        gap:8px;
+
+    }
+
+    .skills span{
+
+        font-size:12px;
+
+        padding:7px 14px;
+
+    }
+
+    .explore-btn{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+    .quote-mark{
+
+        font-size:45px;
+
+    }
+
 }
