@@ -1,14 +1,14 @@
-# Project1 🚀
+# My Portfolio
 
 A comprehensive full-stack web application built with Flask that integrates multiple APIs and web scrapers to provide dynamic data visualization and interactive dashboards.
 
 ## 📋 Overview
 
-Project1 is a feature-rich Flask application that combines real-time data fetching from various APIs with web scraping capabilities. It includes web-based dashboards for exploring music, movies, anime, companies, and more, along with integrated ML models for predictive analytics.
+This is a feature-rich Flask application that combines real-time data fetching from various APIs with web scraping capabilities. It includes web-based dashboards for exploring music, movies, anime, companies, and more, along with integrated ML models for predictive analytics.
 
 ## 🎯 Features
 
-### 🌐 Web Scraping Modules
+###  Web Scraping Modules
 - **Spotify Scraper** - Extract trending Spotify data
 - **Anime Scraper** - Scrape anime information
 - **Steam Games Scraper** - Collect gaming data from Steam
@@ -16,21 +16,21 @@ Project1 is a feature-rich Flask application that combines real-time data fetchi
 - **Goodreads Scraper** - Extract book quotes and reviews
 - **Movie Scraper** - Fetch movie data
 
-### 📡 API Integrations
+###  API Integrations
 - **Plants API** - Search plant information
 - **Movies API** - Query movie details
 - **Weather API** - Real-time weather data
 - **Pokemon API** - Pokémon information lookup
 - **Products API** - Product catalog browsing
 
-### 📊 Dynamic Data Feeds
+###  Dynamic Data Feeds
 - **Top Charts** - Trending movies across platforms
 - **Startups Feed** - Latest startup news and data
 - **Hacker News** - Tech news aggregation
 - **Top Songs** - Music charts and rankings
 - **Disasters** - Real-time disaster information
 
-### 🤖 ML Features
+###  ML Features
 - **Churn Prediction Model** - ML-based customer churn prediction with pre-trained model
 - **Data Scaling** - Integrated scikit-learn scaler for model preprocessing
 
@@ -44,7 +44,7 @@ Project1 is a feature-rich Flask application that combines real-time data fetchi
 | **Web Scraping** | BeautifulSoup, Selenium |
 | **Server** | Gunicorn |
 
-## 📦 Dependencies
+##  Dependencies
 
 ```
 Flask           # Web framework
@@ -54,7 +54,7 @@ beautifulsoup4  # Web scraping
 selenium        # Browser automation
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 - Python 3.7+
@@ -80,7 +80,7 @@ python app.py
 
 The application will start on `http://0.0.0.0:5000`
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 project1/
@@ -156,7 +156,7 @@ project1/
 | `/disasters` | Disaster alerts |
 | `/minor/churn` | Churn prediction |
 
-## 🤖 ML Model
+##  ML Model
 
 The project includes a pre-trained customer churn prediction model:
 - **Model File**: `churn_model.pkl`
@@ -182,14 +182,14 @@ For production, modify `app.py` line 207:
 app.run(host="0.0.0.0", port=5000, debug=False)  # Set debug=False
 ```
 
-## 📥 Deployment
+##  Deployment
 
 Using Gunicorn (recommended for production):
 ```bash
 gunicorn -w 4 -b 0.0.0.0:5000 app:app
 ```
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Feel free to:
 1. Fork the repository
@@ -198,13 +198,13 @@ Contributions are welcome! Feel free to:
 4. Push to the branch
 5. Create a Pull Request
 
-## 📝 License
+##  License
 
 This project is open source and available under the MIT License.
 
-## 👤 Author
+##  Author
 
-**Sanya Gusain**
+**Saniya Gusain**
 - GitHub: [@sanyagusain19](https://github.com/sanyagusain19)
 
 ## 🔗 Links
@@ -212,7 +212,7 @@ This project is open source and available under the MIT License.
 - Repository: https://github.com/sanyagusain19/project1
 - Issues: https://github.com/sanyagusain19/project1/issues
 
-## 📚 Resources
+## Resources
 
 - [Flask Documentation](https://flask.palletsprojects.com/)
 - [BeautifulSoup4 Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
@@ -221,4 +221,4 @@ This project is open source and available under the MIT License.
 
 ---
 
-**Last Updated**: July 26, 2026
+
