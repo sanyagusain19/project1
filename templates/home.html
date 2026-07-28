@@ -18,6 +18,7 @@
     <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }}"> -->
 <link rel="stylesheet" href="{{ url_for('static', filename='css/cursor-trail.css') }}">
 <script src="{{ url_for('static', filename='js/cursor-trail.js') }}"></script>
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 </head>
 
 <body class="page-enter">
@@ -83,13 +84,24 @@
 
                 Projects
             </a>
+            
+       
+          
 
         </div>
 
 
 
-    </section>
+   
+ 
 
+</section>
+<df-messenger
+  intent="WELCOME"
+  chat-title="chatly"
+  agent-id="3af67e7d-6e11-48b8-b433-c1894eb6dc10"
+  language-code="en"
+> chat</df-messenger>
 </body>
 
 </html>

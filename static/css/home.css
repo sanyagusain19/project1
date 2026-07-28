@@ -534,3 +534,16 @@ margin-top:50px;
 }
 
 }
+df-messenger {
+  --df-messenger-bot-message: #f3d9f5;
+  --df-messenger-button-titlebar-color: #d291bc;
+  --df-messenger-chat-background-color: #fef6f9;
+  --df-messenger-font-color: #4a154b;
+  --df-messenger-send-icon: #d291bc;
+  --df-messenger-user-message: #e0bbf9;
+}
+
+df-messenger-chat-bubble {
+  --df-messenger-chat-window-height: 550px;
+  --df-messenger-chat-window-width: 380px;
+}

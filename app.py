@@ -22,6 +22,9 @@ from dynamic.disasters import fetch_disasters
 @app.route("/")
 def home():
     return render_template ("home.html")
+@app.route("/chatly")
+def chatly():
+    return render_template("chatly.html")
 @app.route("/github")
 def github_page():
    return render_template("github.html")
